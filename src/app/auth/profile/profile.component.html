@@ -1,0 +1,67 @@
+<div class="container">
+
+    <div class="profile">
+        <form [formGroup]="form" (ngSubmit)="saveProfile()">
+            <img src="../../../assets/profile.png" alt="default user">
+            <h3>Инфо за потребителя:</h3>
+            <div class="flex">
+                <p>Потребителско име: </p>
+                <p>
+                    <ng-container *ngIf="showEditMode" >
+                         <input  type="text" ngModel formControlName="username" >
+                         <ng-container *ngIf="form.get('username')?.touched" >
+                        <p *ngIf="form.get('username')?.errors?.['required'];" class="error">
+                            Въведете потребителско име!
+                        </p>
+                        <p *ngIf="form.get('username')?.errors?.['minlength']" class="error">
+                            Потребителско име трябва да е поне 2 знака!
+                        </p>
+                      </ng-container>
+                    </ng-container>
+                   
+                    <ng-container *ngIf="!showEditMode">
+                        <p>{{user.username}}</p>
+                    </ng-container>
+                </p>
+            </div>
+            <div class="flex">
+                <p>Email: </p>
+                <p>
+                    <ng-container *ngIf="showEditMode" >
+                    <input type="text" ngModel formControlName="email">
+                    <ng-container *ngIf="form.get('email')?.touched || formSubmitted">
+                        <p class="error" *ngIf="form.get('email')?.errors?.['required'];">
+                            Въведете email!
+                        </p>
+                        <p class="error" *ngIf="form.get('email')?.errors?.['appEmailValidator'];">
+                            Невалиден email!
+                        </p>
+                    </ng-container>
+                    </ng-container>
+                    <ng-container *ngIf="!showEditMode">
+                        <p>{{user.email}}</p>
+                    </ng-container>
+                </p>
+
+            </div>
+            <ng-template #edit>
+                <button class="edit-button" type="submit">Запази</button>
+            </ng-template>
+            <ng-template #nonEdit>
+                <button class="edit-button" type="button" (click)="toggleEditMode()">Редактирай</button>
+            </ng-template>
+            <ng-container *ngTemplateOutlet="showEditMode ? edit : nonEdit"></ng-container>
+
+        </form>
+    </div>
+
+    <div class="row space-top">
+        <div class="col-md-12">
+            <h1>Моите рецепти</h1>
+            <p>Това е списък със всички ваши рецепти.</p>
+        </div>
+    </div>
+    <div class="row space-top">
+        Рецептите....
+    </div>
+</div>

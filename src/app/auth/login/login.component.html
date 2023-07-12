@@ -1,0 +1,44 @@
+<!-- template form -->
+<div>
+    <form #form="ngForm" class="login" (ngSubmit)="loginHandler(form)">
+
+        <fieldset>
+            <h2>Влез в профила си: </h2>
+
+            <p class="field field-icon">
+                <label for="email"><span><i class="far fa-envelope"></i></span></label>
+                <input #emailInput="ngModel" class="input-error" type="text" id="email" [appEmail]="appEmailDomains" placeholder="e-mail"
+                    name="email" ngModel email required>
+            </p>
+           
+            <ng-container *ngIf="emailInput.touched">
+                <p class="error" *ngIf="emailInput.errors?.['required']">
+                    Въведете e-mail!
+                </p>
+                <p class="error" *ngIf="emailInput.errors?.['appEmailValidator']">
+                    E-mail не е валиден!
+                </p>
+            </ng-container>
+            <p class="field field-icon">
+                <label for="password"><span><i class="fas fa-lock"></i></span></label>
+                <input type="password"  #passwordInput="ngModel" name="password" id="password" placeholder="******" ngModel required [minlength]="4">
+            </p>
+            <ng-container  *ngIf="passwordInput.touched">
+                <p class="error" *ngIf="passwordInput.errors?.['required']">
+                    Въведете парола!
+                </p>
+                <p class="error" *ngIf="passwordInput.errors?.['minlength']">
+                    Паролата трябва да бъде поне 4 знака!
+                </p>
+            </ng-container>
+
+            <button [disabled]="form.invalid">Влез</button>
+
+            <p class="text-center">
+                Нямате профил?
+                <a routerLink="/auth/register">Регистрирайте се</a>
+            </p>
+
+        </fieldset>
+    </form>
+</div>

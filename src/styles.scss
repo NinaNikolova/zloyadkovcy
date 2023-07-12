@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+html, body{
+    height: 100%;
+    margin: 10;
+    padding: 10;
+}
+body {
+    display: flex;
+    flex-direction: column;
+  }
+button{
+    background-color: lightgreen;
+    border:none;
+}
+button[disabled] {
+    /* Add your styling properties here */
+    /* For example */
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+.error{
+    color:red;
+}

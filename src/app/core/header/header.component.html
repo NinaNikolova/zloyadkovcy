@@ -1,0 +1,22 @@
+<header>
+
+    <a routerLink="/"> <img src="../../../assets/logo.jpg" alt=""></a>
+    <h6><a routerLink="/">Бързо, лесно и вкусно за злоядковци</a></h6>
+
+
+    <nav>
+        <a routerLink="/" class="active">Начало</a>
+        <a class="user" routerLink="/theme/create" *ngIf="isLoggedIn">Създай категория</a>
+        <a class="user" routerLink="/theme/new" *ngIf="isLoggedIn">Създай рецепта</a>
+    
+        <a class="guest" routerLink="/theme/list">Категории</a>
+        <a class="guest" routerLink="/theme/catalog">Рецепти</a>
+
+        <a class="green" routerLink="/auth/login" *ngIf="!isLoggedIn">Влез</a>
+        <a  class="green" routerLink="/auth/register" *ngIf="!isLoggedIn">Регистрирай се</a>
+
+        <a  class="green" routerLink="/auth/profile" *ngIf="isLoggedIn">Здравей, {{user?.username}}</a>
+            <a class="green" routerLink="/auth/logout" *ngIf="isLoggedIn">Излез</a>
+    </nav>
+
+</header>

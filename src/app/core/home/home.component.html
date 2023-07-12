@@ -1,0 +1,55 @@
+
+<section id="home">
+
+
+
+    <h6 *ngIf="!isLoggedIn">Здравейте, приятели! <i class="fa-regular fa-face-laugh-wink"></i></h6>
+    <h6 *ngIf="isLoggedIn">Здравейте, {{user?.username}}! <i class="fa-regular fa-face-laugh-wink"></i></h6>
+    <ul>
+        <li> <i class="fas fa-pizza-slice"></i> Това е уебсайт за споделяне изпитани вкусни рецепти специално за злояди
+            деца.</li>
+        <li> <i class="fas fa-utensils"></i> Разбира се, за предпочитане е да се приготвят бързо и лесно.</li>
+        <li> <i class="fas fa-mug-hot"></i> Така, че сайта е насочен в помощ на всички нас - мързеливите родители <i
+                class="far fa-laugh-wink"></i>, които нямат възможност да готвят по половин ден за да изхранят
+            семейството си и не са професионални готвачи.</li>
+        <li><i class="fas fa-cheese"></i> Oще по-добре рецептите да могат се приготвят от самите деца или поне те да взимат
+                участие.</li>
+        <li> <i class="fas fa-fish"></i> Авторите сме група приятели, разбира се, семейни и с деца, както и самите деца.</li>
+        <li> <i class="fas fa-hamburger"></i> И тъй като обикновено всички сме доста заети, тук даваме бързи и лесни
+            рецепти. </li>
+        <li> <i class="fas fa-ice-cream"></i> Надяваме се да се заредите с идеи за нови лесни и приятни готварски
+            приключения в кухнята и да успеете да нахраните с наша помощ злоядковците вкъщи! </li>
+    </ul>
+
+    <br />
+    <br />
+
+    <div>
+
+        <a *ngIf="isLoggedIn" routerLink="/theme/create">Добавите своя рецепта и снимка</a>
+        <a routerLink="/catalog">Разгледайте рецептите&hellip;</a>
+
+    </div>
+    <div class="container">
+        <div class="coffee-header">
+            <div class="coffee-header__buttons coffee-header__button-one"></div>
+            <div class="coffee-header__buttons coffee-header__button-two"></div>
+            <div class="coffee-header__display"></div>
+            <div class="coffee-header__details"></div>
+        </div>
+        <div class="coffee-medium">
+            <div class="coffe-medium__exit"></div>
+            <div class="coffee-medium__arm"></div>
+            <div class="coffee-medium__liquid"></div>
+            <div class="coffee-medium__smoke coffee-medium__smoke-one"></div>
+            <div class="coffee-medium__smoke coffee-medium__smoke-two"></div>
+            <div class="coffee-medium__smoke coffee-medium__smoke-three"></div>
+            <div class="coffee-medium__smoke coffee-medium__smoke-for"></div>
+            <div class="coffee-medium__cup"></div>
+        </div>
+        <div class="coffee-footer"></div>
+    </div>
+
+
+
+</section>
