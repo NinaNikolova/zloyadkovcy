@@ -1,4 +1,8 @@
-# App
+# Бързо, лесно и вкусно за злоядковци
+## I am working now on this project....
+
+![image](https://github.com/NinaNikolova/zloyadkovcy/assets/40785979/1346847a-210c-48d1-a338-3e5930994215)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
