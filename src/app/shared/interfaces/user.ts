@@ -1,6 +1,8 @@
-export interface IUser{
-    themes:string[];
-    posts: string[];
+import { Theme } from "./theme";
+import { Post } from "./post";
+export interface User{
+    themes:Theme[];
+    posts: Post[];
     _id: string;
     email:string;
     username:string;

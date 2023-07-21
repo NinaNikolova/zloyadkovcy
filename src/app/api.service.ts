@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import {environment} from '../environments/environment';
-import { IItem } from 'src/app/shared/interfaces/item';
+import { Post } from 'src/app/shared/interfaces/post';
 const apiURL = environment.apiUrl;
 
 @Injectable({
@@ -12,7 +12,7 @@ export class ApiService {
   constructor(private httpClient: HttpClient) { }
 
   loadItems(id: string){
-    return this.httpClient.get<IItem>(`${apiURL}/items/${id}`)
+    return this.httpClient.get<Post>(`${apiURL}/items/${id}`)
   }
 
 }

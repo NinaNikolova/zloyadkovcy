@@ -15,11 +15,17 @@ import { appInterceptorProvider } from './app.interceptor';
 
 import { API_ERROR } from './shared/constants';
 import { BehaviorSubject } from 'rxjs';
+import { PostListComponent } from './post-list/post-list.component';
+import { ThemeListComponent } from './theme-list/theme-list.component';
+import { ThemesComponent } from './themes/themes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PostListComponent,
+    ThemeListComponent,
+    ThemesComponent,
 
   ],
   imports: [
