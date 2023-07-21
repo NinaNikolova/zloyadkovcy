@@ -24,14 +24,7 @@ const routes: Routes = [
     path:'error',
     component: ErrorComponent,
   },
-  {
-    path: 'auth',
-    loadChildren:()=>import('./auth/auth.module').then(m=> m.AuthModule)
-  },
-  {
-    path: 'theme',
-    loadChildren:()=>import('./theme/theme.module').then(m=> m.ThemeModule)
-  },
+  
   {
     path: '**',
     redirectTo: '/not-found'

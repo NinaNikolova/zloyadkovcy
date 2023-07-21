@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable, catchError, map, of, switchMap, throwError
 import { environment } from '../environments/environment';
 import { API_ERROR } from './shared/constants'
 import { Router } from "@angular/router";
-import { AuthService } from "./auth/auth.service";
+
 const apiUrl = environment.apiUrl;
 
 @Injectable()
