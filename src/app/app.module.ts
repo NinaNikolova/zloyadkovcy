@@ -18,6 +18,7 @@ import { BehaviorSubject } from 'rxjs';
 import { PostListComponent } from './post-list/post-list.component';
 import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemesComponent } from './themes/themes.component';
+import { CurrentThemeComponent } from './current-theme/current-theme.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ThemesComponent } from './themes/themes.component';
     PostListComponent,
     ThemeListComponent,
     ThemesComponent,
+    CurrentThemeComponent,
 
   ],
   imports: [
