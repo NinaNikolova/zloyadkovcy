@@ -3,8 +3,8 @@
 
 
 
-    <h6 *ngIf="!isLoggedIn">Здравейте, приятели! <i class="fa-regular fa-face-laugh-wink"></i></h6>
-    <h6 *ngIf="isLoggedIn">Здравейте, {{user?.username}}! <i class="fa-regular fa-face-laugh-wink"></i></h6>
+    <h6>Здравейте, приятели! <i class="fa-regular fa-face-laugh-wink"></i></h6>
+    <h6>Здравейте, Nina! <i class="fa-regular fa-face-laugh-wink"></i></h6>
     <ul>
         <li> <i class="fas fa-pizza-slice"></i> Това е уебсайт за споделяне изпитани вкусни рецепти специално за злояди
             деца.</li>
@@ -26,7 +26,7 @@
 
     <div>
 
-        <a *ngIf="isLoggedIn" routerLink="/theme/create">Добавите своя рецепта и снимка</a>
+        <a routerLink="/theme/create">Добавите своя рецепта и снимка</a>
         <a routerLink="/catalog">Разгледайте рецептите&hellip;</a>
 
     </div>
