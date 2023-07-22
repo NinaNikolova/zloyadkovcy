@@ -3,14 +3,17 @@ import { RouterModule, Routes } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { ProfileComponent } from "./profile/profile.component";
+import { AuthActivate } from "../shared/guards/auth.activate";
 
 const routes: Routes = [
     {
       path: 'login',
        component: LoginComponent,
       data:{
-        title: 'Влез в профила си'
-      }
+        title: 'Влез в профила си',
+        
+      },
+      canActivate:[AuthActivate]
     },
     {
       path: 'register',
@@ -18,7 +21,8 @@ const routes: Routes = [
       component: RegisterComponent,
       data:{
         title: 'Регистрирай се'
-      }
+      },
+      canActivate:[AuthActivate]
     },
     {
         path: 'profile',
@@ -26,7 +30,8 @@ const routes: Routes = [
         component: ProfileComponent,
         data:{
           title: 'Твоят профил'
-        }
+        },
+        canActivate:[AuthActivate]
       },
    
   ];

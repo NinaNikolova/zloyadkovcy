@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/user/user.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  constructor() { }
-    
+  constructor(private userService: UserService, private roter: Router) { }
+
+  get username():string{
+    return this.userService.user?.username || 'приятелю'
+  }
+  get isLoggedIn(): boolean {
+    return this.userService.isLogged;
+  }
 }

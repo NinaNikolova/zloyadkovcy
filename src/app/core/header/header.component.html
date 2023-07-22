@@ -6,18 +6,19 @@
 
     <nav>
         <a routerLink="/" class="active">Начало</a>
-        <a class="user" routerLink="/new-theme" >Създай категория</a>
-        <a class="user" routerLink="/new-post" >Създай рецепта</a>
+        <a *ngIf="isLoggedIn" class="user" routerLink="/new-theme" >Създай категория</a>
+        <a *ngIf="isLoggedIn" class="user" routerLink="/new-post" >Създай рецепта</a>
     
         <a class="guest" routerLink="/themes">Категории</a>
         <!-- <a class="guest" routerLink="/themes/:id">Рецепти</a> -->
         <a class="guest" routerLink="/posts">Всички pецепти</a>
+<div>
+        <a *ngIf="!isLoggedIn" class="green" routerLink="/login" >Влез</a>
+        <a *ngIf="!isLoggedIn" class="green" routerLink="/register">Регистрирай се</a>
 
-        <a class="green" routerLink="/login" >Влез</a>
-        <a  class="green" routerLink="/register">Регистрирай се</a>
-
-        <a  class="green" routerLink="/profile" >Здравей, ....</a>
-            <a class="green" routerLink="/logout" >Излез</a>
-    </nav>
+        <a *ngIf="isLoggedIn" class="green" routerLink="/profile" >Здравей, {{isLoggedIn ? username : "приятелю"}}</a>
+            <a *ngIf="isLoggedIn" class="green" routerLink="/logout" >Излез</a>
+    </div>
+        </nav>
 
 </header>
