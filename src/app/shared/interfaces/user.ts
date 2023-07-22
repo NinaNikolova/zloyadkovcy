@@ -1,12 +1,14 @@
 import { Theme } from "./theme";
 import { Post } from "./post";
 export interface User{
-    themes:Theme[];
-    posts: Post[];
-    _id: string;
-    email:string;
+       email:string;
     username:string;
+    tel:string;
     password:string;
+    // themes:Theme[];
+    // posts: Post[];
+    _id: string;
+ 
     created_at: string;
     updatedAt: string;
     _v:number;

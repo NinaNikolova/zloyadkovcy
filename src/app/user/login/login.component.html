@@ -6,7 +6,7 @@
 
             <p class="field field-icon">
                 <label for="email"><span><i class="fas fa-envelope"></i></span></label>
-                <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+                <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com" #inputEmail> 
             </p>
             <p class="error">
                 Email is required!
@@ -17,7 +17,7 @@
 
             <p class="field field-icon">
                 <label for="password"><span><i class="fas fa-lock"></i></span></label>
-                <input type="password" name="password" id="password" placeholder="******">
+                <input type="password" name="password" id="password" placeholder="******" #inputPassword>
             </p>
             <!-- <p class="error">
                 Въведете парола!
@@ -26,7 +26,7 @@
                 Паролата трябва да е поне 5 знака!
             </p> -->
 
-            <button disabled>Влезте в профила си</button>
+            <button (click)="login(inputEmail.value, inputPassword)">Влезте в профила си</button>
 
             <p class="text-center">
                 Ако нямате профил?
