@@ -13,7 +13,7 @@ const routes: Routes = [
         title: 'Влез в профила си',
         
       },
-      canActivate:[AuthActivate]
+      // canActivate:[AuthActivate]
     },
     {
       path: 'register',
@@ -22,7 +22,7 @@ const routes: Routes = [
       data:{
         title: 'Регистрирай се'
       },
-      canActivate:[AuthActivate]
+      // canActivate:[AuthActivate]
     },
     {
         path: 'profile',
