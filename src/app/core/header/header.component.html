@@ -17,7 +17,7 @@
         <a *ngIf="!isLoggedIn" class="green" routerLink="/register">Регистрирай се</a>
 
         <a *ngIf="isLoggedIn" class="green" routerLink="/profile" >Здравей, {{isLoggedIn ? username : "приятелю"}}</a>
-            <a *ngIf="isLoggedIn" class="green" routerLink="/logout" >Излез</a>
+            <a *ngIf="isLoggedIn" class="green" (click)="logout()" >Излез</a>
     </div>
         </nav>
 
