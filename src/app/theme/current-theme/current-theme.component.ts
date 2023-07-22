@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Theme } from 'src/app/shared/interfaces/theme';
 
 @Component({
   selector: 'app-current-theme',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./current-theme.component.scss']
 })
 export class CurrentThemeComponent {
-
+theme: Theme |undefined;
 }

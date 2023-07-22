@@ -11,7 +11,6 @@ import { HomeComponent } from './core/home/home.component';
 import { LoaderComponent } from './shared/loader/loader.component';
 import { SharedModule } from './shared/shared.module';
 
-import { appInterceptorProvider } from './app.interceptor';
 
 import { API_ERROR } from './shared/constants';
 import { BehaviorSubject } from 'rxjs';
@@ -42,12 +41,7 @@ import { ThemeModule } from './theme/theme.module';
 
 
   ],
-  providers:[
-    appInterceptorProvider,
-    {
-      provide: API_ERROR,
-      useValue: new BehaviorSubject(null)
-    }],
+  providers:[],
   bootstrap: [AppComponent],
   exports: []
 })
