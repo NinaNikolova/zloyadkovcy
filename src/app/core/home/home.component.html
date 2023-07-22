@@ -2,9 +2,10 @@
 <section id="home">
 
 
-
   
     <h6>Здравейте, {{username}}! <i class="fa-regular fa-face-laugh-wink"></i></h6>
+
+ 
     <ul>
         <li> <i class="fas fa-pizza-slice"></i> Това е уебсайт за споделяне изпитани вкусни рецепти специално за злояди
             деца.</li>
@@ -25,9 +26,12 @@
     <br />
 
     <div>
+        <p *ngIf="!isLoggedIn">Ако искате да споделите тук изпитана вкусна рецепта, моля, <a routerLink="/login">да влезете в профила си<i class="fas fa-sign-in-alt"></i></a>, или ако нямате, трябва <a routerLink="/register" >да се регистрирате <i class="fas fa-user-plus"></i></a>! </p>
+        
         <a *ngIf="isLoggedIn" routerLink="/new-post">Добавите рецепта</a>
         <a  *ngIf="isLoggedIn" routerLink="/new-theme">Добавите категория</a>
-        <a *ngIf="!isLoggedIn" routerLink="/catalog">Разгледайте рецептите&hellip;</a>
+        <p *ngIf="!isLoggedIn">Ако искате да само да разгледате и да откриете рецепта за злоядковци-бърза, лесна и вкусна тук, заповядайте!  </p>
+        <a *ngIf="!isLoggedIn" routerLink="/posts">Разгледайте рецептите&hellip;</a>
 
     </div>
     <div class="container">

@@ -14,17 +14,18 @@ import { ErrorComponent } from './error/error.component';
 
 
 
-@NgModule({
-  declarations: [
-    HeaderComponent,
-    FooterComponent,
 
-HomeComponent,
-  PageNotFoundComponent,
-  ErrorComponent
-  ],
-  imports: [
-    CommonModule, SharedModule, RouterModule],
-  exports: [HeaderComponent, FooterComponent, PageNotFoundComponent, HomeComponent]
+@NgModule({
+    declarations: [
+        HeaderComponent,
+        FooterComponent,
+        HomeComponent,
+        PageNotFoundComponent,
+        ErrorComponent
+    ],
+    exports: [HeaderComponent, FooterComponent, PageNotFoundComponent, HomeComponent],
+    imports: [
+        CommonModule, SharedModule, RouterModule, 
+    ]
 })
 export class CoreModule { }

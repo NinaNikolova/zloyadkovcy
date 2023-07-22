@@ -29,7 +29,6 @@ import { ThemeModule } from './theme/theme.module';
     ThemeListComponent,
     ThemesComponent,
 
-
   ],
   imports: [
     BrowserModule,
