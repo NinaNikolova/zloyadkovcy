@@ -1,1 +1,63 @@
-<p>register works!</p>
+<div class="container">
+    <form class="register" action="" method="post">
+
+        <fieldset>
+            <h2>Регистрирайте се</h2>
+
+            <!-- username -->
+            <p class="field field-icon">
+                <label for="username"><span><i class="fas fa-user"></i></span></label>
+                <input class="input-error" type="text" name="username" id="username" placeholder="Емилия">
+            </p>
+            <p class="error">
+                Въведете потребителско име!
+            </p>
+
+            <!-- email -->
+            <p class="field field-icon">
+                <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+                <input type="email" name="email" id="email" placeholder="john.doe@gmail.com">
+            </p>
+            <!-- <p class="error">
+                Въведете e-mail!
+            </p>
+            <p class="error">
+                Невалиден E-mail!
+            </p> -->
+
+            <!-- telephone -->
+            <p class="field field-icon">
+                <label for="tel"><span><i class="fas fa-phone"></i></span></label>
+               
+                <input type="text" name="tel" id="tel" placeholder="885 888 888">
+            </p>
+
+            <!-- password -->
+            <p class="field field-icon">
+                <label for="password"><span><i class="fas fa-lock"></i></span></label>
+                <input type="password" name="password" id="password" placeholder="******">
+            </p>
+            <!-- <p class="error">
+                Въведете парола!
+            </p>
+            <p class="error">
+                Паролата трябва да бъде поне 5 знака!
+            </p> -->
+
+            <!-- rePassword -->
+            <p class="field field-icon">
+                <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
+                <input type="password" name="rePassword" id="rePassword" placeholder="******">
+            </p>
+            <!-- <p class="error">Паролите не съответстват!</p> -->
+
+            <button disabled>Създайте профил</button>
+
+            <p class="text-center">
+            Вече сте регистрирани?
+                <a routerLink="/login">Влезте в профила си</a>
+            </p>
+
+        </fieldset>
+    </form>
+</div>

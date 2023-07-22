@@ -19,6 +19,7 @@ import { PostListComponent } from './post-list/post-list.component';
 import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemesComponent } from './themes/themes.component';
 import { UserModule } from './user/user.module';
+import { ThemeModule } from './theme/theme.module';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { UserModule } from './user/user.module';
     SharedModule,
     CoreModule,
     UserModule,
+    ThemeModule,
     AppRoutingModule,
 
 
