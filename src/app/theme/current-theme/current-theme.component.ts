@@ -29,9 +29,9 @@ export class CurrentThemeComponent implements OnInit{
   fetchTheme(): void {
     const id = this.activatedRoute.snapshot.params['themeId'];
 
-    this.apiService.getTheme(id).subscribe((t) => {
-        console.log({ t});
-      this.theme = t;
+    this.apiService.getTheme(id).subscribe((theme) => {
+        console.log({ theme});
+      this.theme = theme;
     
     });
   }

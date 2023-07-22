@@ -7,34 +7,26 @@ import { AuthActivate } from "../shared/guards/auth.activate";
 
 const routes: Routes = [
     {
-        path: 'themes',
-        data: {
-            title: 'Категории'
+      path: 'themes',
+      children: [
+        {
+          path: '',
+          pathMatch: 'full',
+          component: ThemesComponent,
         },
-        children: [
-            {
-                path: '',
-                pathMatch: 'full',
-                component: ThemesComponent,
-            },
-            {
-                path: ':themeId',
-                component: CurrentThemeComponent
-
-            },
-        ]
+        {
+          path: ':themeId',
+          component: CurrentThemeComponent,
+        },
+      ],
     },
-
     {
-        path: 'new-theme',
-        component: NewThemeComponent,
-        data: {
-            title: 'Създаване на категория'
-        },
-        canActivate:[AuthActivate]
+      path: 'add-theme',
+      component: NewThemeComponent,
+      canActivate: [AuthActivate],
     },
-
-];
+  ];
+  
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
