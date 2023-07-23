@@ -1,0 +1,26 @@
+.label {
+    color: white;
+    padding: 10px;
+    font-family: Arial;
+    border-radius: 5px;
+    
+  }
+  a{
+    text-decoration: none;
+  }
+  .success {
+    background-color: lightgreen;
+} 
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-decoration: none;
+}
+li:hover{
+    background-color: #04AA6D;
+}
+h2{
+    color:#6c8b47;
+    text-align: center;
+}

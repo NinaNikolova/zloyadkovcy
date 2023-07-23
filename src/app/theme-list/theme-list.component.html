@@ -1,4 +1,6 @@
+<div class="container">
 <h3>Категории рецепти</h3>
 <ul *ngFor="let theme of themesList">
-    <li><a [routerLink]="theme._id" >{{theme.themeName}}</a></li>
+    <li class="label success"><a [routerLink]="theme._id" >{{theme.themeName}}</a></li>
 </ul>
+</div>

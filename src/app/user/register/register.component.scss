@@ -1,5 +1,8 @@
 /*login register forms  */
-
+label{
+    width:30%;
+    color:green;
+}
 form.login, form.register {
     width: 40%;
     display:flex;
@@ -19,6 +22,7 @@ form.login, form.register {
 .login h2, .register h2 {
     padding-top: 0;
     border-bottom: none;
+    color:#6c8b47;
 }
 
 .login p, .register p {
@@ -28,15 +32,15 @@ form.login, form.register {
 
 .login input, .register input {
     flex: 0 1 100%;
-    border: 1px solid;
+    border: 1px solid  green;
     padding: 0.3em;
-    border-left: 0.3em solid green;
-    border-top-right-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
+    
+    border-radius: 0.3em;
+
 }
 
 .login select, .register select {
-    border-color: black;
+    border-color: greenyellow;
 }
 
 .login button, .register button {
@@ -49,17 +53,10 @@ form.login, form.register {
     outline: none;
 }
 
-.login i, .register i {
-    border: 1px solid;
-    border-right: none;
-    padding: 0.55em;
-    border-top-left-radius: 0.3em;
-    border-bottom-left-radius: 0.3em;
-    background-color: #e9ecef;
-}
+
 
 .login a, .register a {
-    color: #007bff;
+    color: green;
 }
 
 .login a:hover, .register a:hover {

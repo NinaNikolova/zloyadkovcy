@@ -27,10 +27,9 @@ export class UserService {
     this.user = {
       email: 'ninagbs@abv.bg',
       username: 'Nina',
-      tel: '0884127067',
       password: '123456',
-      //   themes:["Основни безмесни ястия"],
-      // posts:["Яйца на очи"],
+      themes:[],
+      posts:[],
       _id: "12345",
 
       created_at: '22072023',

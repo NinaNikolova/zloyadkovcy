@@ -1,1 +1,17 @@
-<p>post-list works!</p>
+<h3>Всички рецепти</h3>
+
+<ul class="cards" *ngFor="let post of postList">
+    <li>
+       
+       
+        <div class="card">
+            <img src="{{post.img}}" alt="{{post.title}}" style="width:100%">
+            <h6>{{post.title}}</h6>
+            <p class="time">Време на приготвяне в минути: {{post.time}} </p>
+            <p>Съставки: {{post.ingredients}}</p>
+            <p>Начин на приготвяне: {{post.text}}</p>
+            <button>Вижте цялата рецепта...</button>
+          </div>
+                
+    </li>
+</ul>

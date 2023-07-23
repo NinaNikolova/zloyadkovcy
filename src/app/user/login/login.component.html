@@ -5,26 +5,27 @@
             <h2>Влез в профила си:</h2>
 
             <p class="field field-icon">
-                <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+                <label for="email">E-mail:</label>
                 <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com" #inputEmail> 
             </p>
             <p class="error">
                 Email is required!
             </p>
-            <!-- <p class="error">
+
+            <p class="error">
                   Невалиден E-mail!
-            </p> -->
+            </p>
 
             <p class="field field-icon">
-                <label for="password"><span><i class="fas fa-lock"></i></span></label>
+                <label for="password">Парола:</label>
                 <input type="password" name="password" id="password" placeholder="******" #inputPassword>
             </p>
-            <!-- <p class="error">
+            <p class="error">
                 Въведете парола!
             </p>
             <p class="error">
                 Паролата трябва да е поне 5 знака!
-            </p> -->
+            </p>
 
             <button (click)="login(inputEmail.value, inputPassword.value)">Влезте в профила си</button>
 
