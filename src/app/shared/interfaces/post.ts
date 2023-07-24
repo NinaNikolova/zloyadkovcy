@@ -2,6 +2,7 @@ import { User } from "./user";
 import { Theme } from "./theme";
 
 export interface Post {
+    _id:string;
     title: string;
     ingredients: string;
     time:string,

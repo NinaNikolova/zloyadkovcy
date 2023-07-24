@@ -1,2 +1,21 @@
-<p>current-theme works!</p>
+<div class="container">
+    <h2>{{theme?.themeName}}</h2>
+    <ul class="cards" *ngFor="let post of theme?.posts">
+        <li class="card">
+       
+       
+           
+                <img src="{{post?.img}}" alt="{{post?.title}}" style="width:100%">
+                <h6>{{post?.title}}</h6>
+                <p class="time">Време на приготвяне в минути: {{post?.time}} </p>
+                <p>Съставки: {{post?.ingredients}}</p>
+                <p>Начин на приготвяне: {{post?.text}}</p>
+                <a>Вижте цялата рецепта...</a>
+              
+                    
+        </li>
+    </ul>
+    </div>
+
+    
 

@@ -18,6 +18,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     ThemeRoutingModule
   ],
-  exports:[NewThemeComponent]
+  exports:[NewThemeComponent, CurrentThemeComponent]
 })
 export class ThemeModule { }

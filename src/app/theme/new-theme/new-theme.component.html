@@ -1,5 +1,5 @@
 <div class="container">
-    <form class="new-theme" #form="ngForm" (ngSubmit)="newThemeHandler(form)">
+    <form class="new-theme" #form="ngForm" (ngSubmit)="createTheme(form)">
       <fieldset>
         <h2>Създайте нова категория:</h2>
   
@@ -14,7 +14,7 @@
             #inputThemeName="ngModel"
             ngModel
             required
-            minlength="10"
+            minlength="2"
               />
         </p>
         <ng-container *ngIf="inputThemeName.touched">

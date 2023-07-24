@@ -7,5 +7,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./new-theme.component.scss']
 })
 export class NewThemeComponent {
-  newThemeHandler(form: NgForm){}
+  createTheme(form: NgForm):void{
+    if(form.invalid){
+      return;
+    }
+    console.log(form.value)
+  }
 }
