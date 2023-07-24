@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { User } from '../shared/interfaces/user';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
@@ -8,7 +8,7 @@ import { BehaviorSubject, Subscription, tap } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class UserService implements OnDestroy{
   private user$$ = new BehaviorSubject<User | undefined>(undefined);
   public user$ = this.user$$.asObservable();
 
@@ -33,5 +33,15 @@ export class UserService {
   }
   logout() {
        return this.http.post<User>('/api/logout', {} ).pipe(tap(() => this.user$$.next(undefined)));
+  }
+
+  getUser(){
+    return this.http.get<User>('/api/users/profile')
+    .pipe(tap((user)=>this.user$$.next(user)))
+  }
+
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 }
