@@ -15,6 +15,7 @@ import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemesComponent } from './themes/themes.component';
 import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
+import { appInterceptorProvider } from './app-interceptor';
 
 
 @NgModule({
@@ -37,7 +38,7 @@ import { ThemeModule } from './theme/theme.module';
 
 
   ],
-  providers:[],
+  providers:[appInterceptorProvider],
   bootstrap: [AppComponent],
   exports: []
 })
