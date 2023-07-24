@@ -19,7 +19,7 @@
       </p>
       <ng-container *ngIf="inputEmail.touched">
         <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
-        <p class="error" *ngIf="inputEmail.errors?.['minlength']">Грешен email!</p>
+        <p class="error" *ngIf="inputEmail.errors?.['minlength']">Email трябва да е поне {{inputEmail.errors?.['minlength']['requiredLength']}} знака!</p>
       </ng-container>
    
 
@@ -38,10 +38,13 @@
       </p>
       <ng-container *ngIf="inputPassword.touched">
         <p class="error" *ngIf="inputPassword.errors?.['required']">Въведете парола!</p>
-        <p class="error" *ngIf="inputPassword.errors?.['minlength']">Паролата трябва да е поне 5 знака!</p>
+        <p class="error" *ngIf="inputPassword.errors?.['minlength']">Паролата трябва да е поне {{inputPassword.errors?.['minlength']['requiredLength']}} знака!</p>
       </ng-container>
 
-      <button>Влезте в профила си</button>
+      <button
+      [disabled]="form.invalid"
+      [style]="{backgroundColor : form.invalid ? 'lightgray' : 'lightgreen'}"
+      >Влезте в профила си</button>
 
       <p class="text-center">
         Ако нямате профил?
