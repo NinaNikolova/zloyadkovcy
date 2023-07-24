@@ -1,39 +1,53 @@
 <div class="container">
-    <form class="login" action="" method="post">
+  <form class="login" #form="ngForm" (ngSubmit)="login(form)">
+    <fieldset>
+      <h2>Влез в профила си:</h2>
 
-        <fieldset>
-            <h2>Влез в профила си:</h2>
+      <p class="field field-icon">
+        <label for="email">E-mail:</label>
+        <input
+          class="input-error"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john.doe@gmail.com"
+          #inputEmail="ngModel"
+          ngModel
+          required
+          minlength="10"
+            />
+      </p>
+      <ng-container *ngIf="inputEmail.touched">
+        <p class="error" *ngIf="inputEmail.errors?.['required']">Email is required!</p>
+        <p class="error" *ngIf="inputEmail.errors?.['minlength']">Грешен email!</p>
+      </ng-container>
+   
 
-            <p class="field field-icon">
-                <label for="email">E-mail:</label>
-                <input class="input-error" type="email" name="email" id="email" placeholder="john.doe@gmail.com" #inputEmail> 
-            </p>
-            <p class="error">
-                Email is required!
-            </p>
+      <p class="field field-icon">
+        <label for="password">Парола:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="******"
+          #inputPassword="ngModel"
+          ngModel
+          required
+          minlength="5"
+        />
+      </p>
+      <ng-container *ngIf="inputPassword.touched">
+        <p class="error" *ngIf="inputPassword.errors?.['required']">Въведете парола!</p>
+        <p class="error" *ngIf="inputPassword.errors?.['minlength']">Паролата трябва да е поне 5 знака!</p>
+      </ng-container>
 
-            <p class="error">
-                  Невалиден E-mail!
-            </p>
+      <button>Влезте в профила си</button>
 
-            <p class="field field-icon">
-                <label for="password">Парола:</label>
-                <input type="password" name="password" id="password" placeholder="******" #inputPassword>
-            </p>
-            <p class="error">
-                Въведете парола!
-            </p>
-            <p class="error">
-                Паролата трябва да е поне 5 знака!
-            </p>
-
-            <button (click)="login(inputEmail.value, inputPassword.value)">Влезте в профила си</button>
-
-            <p class="text-center">
-                Ако нямате профил?
-                <a routerLink="/register">Регистрирайте се</a>
-            </p>
-
-        </fieldset>
-    </form>
+      <p class="text-center">
+        Ако нямате профил?
+        <a routerLink="/register">Регистрирайте се</a>
+      </p>
+    </fieldset>
+  </form>
+  {{ form.value | json }}
 </div>

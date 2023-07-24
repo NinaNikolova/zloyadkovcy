@@ -1,5 +1,5 @@
 import { InjectionToken } from "@angular/core";
 
-export const appEmailDomains =['gmail','bg','yahoo','students.119su','com'];
+export const DEFAULT_EMAIL_DOMAINS =['bg','com'];
 
 export const API_ERROR = new InjectionToken('APP_ERROR');
