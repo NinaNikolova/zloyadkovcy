@@ -12,4 +12,5 @@ constructor(private userService: UserService, router: Router){}
 get isLoggedIn(): boolean {
   return this.userService.isLogged;
 }
+
 }

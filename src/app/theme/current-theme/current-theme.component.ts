@@ -21,6 +21,10 @@ export class CurrentThemeComponent implements OnInit{
   get isLogged(): boolean {
     return this.userService.isLogged;
   }
+  get isOwner():boolean{
+    return this.userService.user?._id===this.theme?.userId;
+  }
+
 
   ngOnInit(): void {
     this.fetchTheme();
@@ -35,4 +39,5 @@ export class CurrentThemeComponent implements OnInit{
     
     });
   }
+  
 }
