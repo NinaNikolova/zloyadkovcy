@@ -1,0 +1,87 @@
+/*login register forms  */
+
+form.new-theme {
+    width: 40%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2em auto;
+    height: 77vh;
+}
+
+.new-theme fieldset, .register fieldset {
+    border-radius: 0.3em;
+    padding: 0.8em;
+    background-color: #ffffff;
+}
+
+.new-theme h2, .register h2 {
+    padding-top: 0;
+    border-bottom: none;
+    color:#6c8b47;
+}
+
+.new-theme p, .register p {
+    padding-bottom: 0;
+    padding-top: 1.5rem;
+}
+
+.new-theme input, .register input {
+    flex: 0 1 100%;
+    border: 1px solid green;
+    padding: 0.3em;
+  
+    border-radius: 0.3em;
+  
+}
+
+.new-theme select, .register select {
+    border-color:green;
+}
+
+.new-theme button, .register button {
+    color: white;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.6em 1.2em;
+    margin-top: 1.5rem;
+    width: 60%;
+    outline: none;
+}
+
+
+
+.new-theme a, .register a {
+    color: green;
+}
+
+.new-theme a:hover, .register a:hover {
+    cursor: pointer;
+}
+
+.register .tel {
+    padding-right: 0.8em;
+}
+
+.new-theme .field, .register .field {
+    display: flex;
+    padding-bottom: 0;
+}
+
+/* errors  */
+
+p.error {
+    text-align: left;
+    border-radius: 0.3em;
+    color: red;
+    padding-top: 0;
+}
+
+.input-error {
+    border-left-color: red;
+}
+label{
+    width:30%;
+    color:green;
+}

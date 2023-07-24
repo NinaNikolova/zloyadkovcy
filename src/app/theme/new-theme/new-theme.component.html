@@ -1,1 +1,36 @@
-<p>new-theme works!</p>
+<div class="container">
+    <form class="new-theme" #form="ngForm" (ngSubmit)="newThemeHandler(form)">
+      <fieldset>
+        <h2>Създайте нова категория:</h2>
+  
+        <p class="field field-icon">
+          <label for="themeName">Име: </label>
+          <input
+            class="input-error"
+            type="themeName"
+            name="themeName"
+            id="themeName"
+            placeholder="john.doe@gmail.com"
+            #inputThemeName="ngModel"
+            ngModel
+            required
+            minlength="10"
+              />
+        </p>
+        <ng-container *ngIf="inputThemeName.touched">
+          <p class="error" *ngIf="inputThemeName.errors?.['required']">Въведете име на категорията!</p>
+          <p class="error" *ngIf="inputThemeName.errors?.['minlength']">Името на категорията трябва да е поне {{inputThemeName.errors?.['minlength']['requiredLength']}} знака!</p>
+        </ng-container>
+     
+
+  
+        <button
+        [disabled]="form.invalid"
+        [style]="{backgroundColor : form.invalid ? 'lightgray' : 'lightgreen'}"
+        >Създай категория</button>
+  
+      </fieldset>
+    </form>
+    {{ form.value | json }}
+  </div>
+  

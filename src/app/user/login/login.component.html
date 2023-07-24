@@ -37,8 +37,8 @@
         />
       </p>
       <ng-container *ngIf="inputPassword.touched">
-        <p class="error" *ngIf="inputPassword.errors?.['required']">Въведете парола!</p>
-        <p class="error" *ngIf="inputPassword.errors?.['minlength']">Паролата трябва да е поне {{inputPassword.errors?.['minlength']['requiredLength']}} знака!</p>
+        <p class="error" *ngIf="inputPassword.errors?.['required']"> Въведете парола!</p>
+        <p class="error" *ngIf="inputPassword.errors?.['minlength']"> Паролата трябва да е поне {{inputPassword.errors?.['minlength']['requiredLength']}} знака!</p>
       </ng-container>
 
       <button

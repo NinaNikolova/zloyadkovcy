@@ -9,6 +9,7 @@ const routes: Routes = [
     {
       path: 'themes',
       children: [
+        
         {
           path: '',
           pathMatch: 'full',
