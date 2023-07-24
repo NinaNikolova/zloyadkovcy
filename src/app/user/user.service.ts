@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '../shared/interfaces/user';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -15,7 +16,7 @@ export class UserService {
     // this mean if user - true, else - false
     return !!this.user;
   }
-  constructor() {
+  constructor(private http: HttpClient) {
     try {
       const lsUser = localStorage.getItem(this.USER_KEY) || "";
       this.user = JSON.parse(lsUser)
@@ -23,20 +24,8 @@ export class UserService {
       this.user = undefined;
     }
   }
-  login(): void {
-    this.user = {
-      email: 'ninagbs@abv.bg',
-      username: 'Nina',
-      password: '123456',
-      themes:[],
-      posts:[],
-      _id: "12345",
-
-      created_at: '22072023',
-      updatedAt: '22072023',
-      _v: 1
-    }
-    localStorage.setItem(this.USER_KEY, JSON.stringify(this.user))
+  login(email:string, password:string) {
+    return this.http.post('/api/login', {email, password} )
   }
   logout(): void {
     this.user = undefined;
