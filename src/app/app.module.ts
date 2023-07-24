@@ -10,7 +10,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
 import { SharedModule } from './shared/shared.module';
 import { API_ERROR } from './shared/constants';
 import { BehaviorSubject } from 'rxjs';
-import { PostListComponent } from './post-list/post-list.component';
+import { PostListComponent } from './receipt-list/post-list.component';
 import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemesComponent } from './themes/themes.component';
 import { UserModule } from './user/user.module';
