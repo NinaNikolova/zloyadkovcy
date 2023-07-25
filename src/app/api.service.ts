@@ -10,17 +10,21 @@ import { Theme } from './shared/interfaces/theme';
 })
 export class ApiService {
   constructor(private http: HttpClient) {}
-
+// Themes
   getTheme(id: string) {
     const { apiUrl } = environment;
     return this.http.get<Theme>(`${apiUrl}/themes/${id}`);
+  }
+  createTheme(themeName:string) {
+    const { apiUrl } = environment;
+    return this.http.post<Theme>('/api/themes', {themeName});
   }
 
   getThemes() {
     const { apiUrl } = environment;
     return this.http.get<Theme[]>(`${apiUrl}/themes`);
   }
-
+// Posts
   getPosts(limit?: number) {
     const { apiUrl } = environment;
     const limitFilter = limit ? `?limit=${limit}` : '';
