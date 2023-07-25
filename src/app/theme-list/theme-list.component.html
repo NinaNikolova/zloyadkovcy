@@ -2,6 +2,6 @@
 <div class="container">
 <h2>Категории рецепти</h2>
 <ul *ngFor="let theme of themesList">
-    <li class="label success"><a [routerLink]="theme._id" >{{theme.themeName}}</a></li>
+    <li class="label success"><a [routerLink]="theme._id" >{{theme.themeName | uppercase}}</a></li>
 </ul>
 </div>

@@ -13,7 +13,7 @@ export class AppInterceptor implements HttpInterceptor {
     if (req.url.startsWith('/api')) {
       req = req.clone({
         url: req.url.replace('/api', apiUrl),
-        withCredentials: true,
+        withCredentials: true, //Cookie -> JWT
       })
     }
     return next.handle(req).pipe(
