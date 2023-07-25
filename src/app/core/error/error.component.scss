@@ -1,21 +1,10 @@
-.notification{
-    position: fixed;
-    z-index: 10;
-    right: 8%;
-    top: 8%;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    color: rgb(255, 255, 255);
-    font-style: italic;
-    text-decoration: underline;
-    box-shadow: 0 5px 10px rgb(204, 204, 204);
-    background-color: rgba(238, 74, 74, 0.699);
-   }
-  
-   .error-message {
-    background-color: rgba(238, 74, 74, 0.699);
-   }
-   .success-message {
-    background-color: rgba(99, 230, 81, 0.699);
-   }
-   
+.error {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding: 15px 10px 15px 50px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
