@@ -9,11 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
 import { ErrorComponent } from './error/error.component';
-
-
-
 
 @NgModule({
     declarations: [
@@ -21,7 +17,8 @@ import { ErrorComponent } from './error/error.component';
         FooterComponent,
         HomeComponent,
         PageNotFoundComponent,
-        ErrorComponent
+        ErrorComponent,
+       
     ],
     exports: [HeaderComponent, FooterComponent, PageNotFoundComponent, HomeComponent],
     imports: [

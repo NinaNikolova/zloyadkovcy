@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './core/home/home.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
-import { ErrorComponent } from './core/error/error.component';
 import { PostListComponent } from './post-list/post-list.component';
+import { ErrorComponent } from './core/error/error.component';
 
 const routes: Routes = [
   {
@@ -28,13 +28,15 @@ const routes: Routes = [
     component: PageNotFoundComponent,
     data:{
       title: 'Грешка'
-    }
+    },
   },
   {
-    path:'error',
+    path: 'error',
     component: ErrorComponent,
+    data:{
+      title: 'Грешка'
+    }
   },
-  
   {
     path: '**',
     redirectTo: '/not-found'
