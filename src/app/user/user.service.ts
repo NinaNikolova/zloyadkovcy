@@ -8,7 +8,7 @@ import { BehaviorSubject, Subscription, tap } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserService implements OnDestroy{
+export class UserService implements OnDestroy {
   private user$$ = new BehaviorSubject<User | undefined>(undefined);
   public user$ = this.user$$.asObservable();
 
@@ -18,28 +18,56 @@ export class UserService implements OnDestroy{
   get isLogged(): boolean {
     return !!this.user;
   }
+
   subscription: Subscription;
-  
+
   constructor(private http: HttpClient) {
-  this.subscription = this.user$.subscribe((user)=>{
-    this.user=user;
-  })
-}
-  login(email:string, password:string) {
-    return this.http.post<User>('/api/login', {email, password} ).pipe(tap(user=>this.user$$.next(user)))
+    this.subscription = this.user$.subscribe((user) => {
+      this.user = user;
+    });
   }
-  register(username:string, email:string,  password:string, rePass:string) {
-    return this.http.post<User>('/api/register', {email,username, password, rePass}).pipe(tap(user=>this.user$$.next(user)))
+
+  login(email: string, password: string) {
+    return this.http
+      .post<User>('/api/login', { email, password })
+      .pipe(tap((user) => this.user$$.next(user)));
   }
+
+  register(
+    username: string,
+    email: string,
+    password: string,
+    rePass: string,
+    
+  ) {
+    return this.http
+      .post<User>('/api/register', {
+        username,
+        email,
+        password,
+        rePass,
+        
+      })
+      .pipe(tap((user) => this.user$$.next(user)));
+  }
+
   logout() {
-       return this.http.post<User>('/api/logout', {} ).pipe(tap(() => this.user$$.next(undefined)));
+    return this.http
+      .post<User>('/api/logout', {})
+      .pipe(tap(() => this.user$$.next(undefined)));
   }
 
-  getUser(){
-    return this.http.get<User>('/api/users/profile')
-    .pipe(tap((user)=>this.user$$.next(user)))
+  getProfile() {
+    return this.http
+      .get<User>('/api/users/profile')
+      .pipe(tap((user) => this.user$$.next(user)));
   }
 
+  updateProfile(username: string, email: string) {
+    return this.http
+      .put<User>('/api/users/profile', { username, email })
+      .pipe(tap((user) => this.user$$.next(user)));
+  }
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

@@ -16,7 +16,7 @@ export class NewThemeComponent {
     }
     const {themeName} = form.value;
     this.apiService.createTheme(themeName).subscribe(()=>{
-      this.router.navigate(['/themes'])
+      this.router.navigate(['/posts'])
     })
 
   }

@@ -24,10 +24,10 @@ export class ThemeListComponent implements OnInit{
     this.apiService.getThemes().subscribe({
       next: (themes) => {
         this.themesList = themes;
-        this.isLoading = false;
+    
       },
       error: (err) => {
-        this.isLoading = false;
+  
         console.error(`Error: ${err}`);
       },
     });
