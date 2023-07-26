@@ -17,6 +17,7 @@ import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
 import { appInterceptorProvider } from './app-interceptor';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
+import { PostModule } from './post/post.module';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
     CoreModule,
     UserModule,
     ThemeModule,
+    PostModule,
     AppRoutingModule,
 
 

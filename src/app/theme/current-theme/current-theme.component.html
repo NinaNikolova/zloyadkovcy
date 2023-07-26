@@ -11,7 +11,11 @@
                 <p>Начин на приготвяне: {{post?.text}}</p>
                 <a>Вижте цялата рецепта...</a>     
         </li>
+     
     </ul>
+ <ng-container *ngIf="isLogged">
+            <app-new-post />
+            </ng-container>
     </div>
 
     

@@ -15,14 +15,7 @@ const routes: Routes = [
     }
   },
   
-  {
-    path: 'posts',
-       component: PostListComponent,
-    data:{
-      title: 'Всички рецепти'
-    }
-  },
-  
+    
   {
     path: 'not-found',
     component: PageNotFoundComponent,

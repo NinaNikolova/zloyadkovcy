@@ -31,4 +31,8 @@ export class ApiService {
 
     return this.http.get<Post[]>(`${apiUrl}/posts${limitFilter}`);
   }
+  createPost(title:string, time:number, img:string, text:string, themeId:string, userId:string) {
+    const { apiUrl } = environment;
+    return this.http.post<Theme>('/api/posts', {title, time, img, text, themeId, userId});
+  }
 }
