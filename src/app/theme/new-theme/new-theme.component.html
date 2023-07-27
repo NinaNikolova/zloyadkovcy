@@ -1,36 +1,94 @@
 <div class="container">
-    <form class="new-theme" #form="ngForm" (ngSubmit)="createTheme(form)">
-      <fieldset>
-        <h2>Създайте нова категория:</h2>
+  <form class="new-post" #form="ngForm" (ngSubmit)="createTheme(form)">
+    <fieldset>
+      <h2>Създайте нова рецепта:</h2>
   
-        <p class="field field-icon">
-          <label for="themeName">Име: </label>
-          <input
-            class="input-error"
-            type="themeName"
-            name="themeName"
-            id="themeName"
-            placeholder="john.doe@gmail.com"
-            #inputThemeName="ngModel"
-            ngModel
-            required
-            minlength="2"
-              />
+<!-- TITLE -->
+      <p class="field field-icon">
+        <label for="title">Заглавие: </label>
+        <input class="input-error" type="title" name="title" id="title" placeholder="Яйца на очи" #inputTitle="ngModel" ngModel required minlength="2"
+        />
+      </p>
+      <ng-container *ngIf="inputTitle.touched">
+        <p class="error" *ngIf="inputTitle.errors?.['required']">
+          Въведете заглавие на пецептата!
         </p>
-        <ng-container *ngIf="inputThemeName.touched">
-          <p class="error" *ngIf="inputThemeName.errors?.['required']">Въведете име на категорията!</p>
-          <p class="error" *ngIf="inputThemeName.errors?.['minlength']">Името на категорията трябва да е поне {{inputThemeName.errors?.['minlength']['requiredLength']}} знака!</p>
-        </ng-container>
-     
+        <p class="error" *ngIf="inputTitle.errors?.['minlength']">
+          Заглавието на рецептата трябва да е поне
+          {{inputTitle.errors?.['minlength']['requiredLength']}} знака!
+        </p>
+      </ng-container>
+<!-- CATEGORY -->
+      <p class="field field-icon">
+        <label for="category">Категория: </label>
 
-  
-        <button
+        <select id="category"  class="input-error" type="text" name="category" id="category" placeholder="Яйца на очи" #inputCategory="ngModel" ngModel required >
+          <option value="Закуски и тестени">Закуски и тестени</option>
+          <option value="Салати">Салати</option>
+          <option value="Супички">Супички</option>
+          <option value="Основни с месо">Основни с месо</option>
+          <option value="Основни без месо">Основни без месо</option>
+          <option value="Десерти">Десерти</option>
+          <option value="Напитки">Напитки</option>
+       
+        </select>
+      </p>
+      <ng-container *ngIf="inputCategory.touched">
+        <p class="error" *ngIf="inputCategory.errors?.['required']">
+          Въведете категория!
+        </p>
+       
+      </ng-container>
+
+      <p class="field field-icon">
+        <label for="time">Време за приготвяне: </label>
+        <input class="input-error" type="number" name="time" id="time" placeholder="10" #inputTime="ngModel" ngModel required minlength="1" />
+      </p>
+      <ng-container *ngIf="inputTime.touched">
+        <p class="error" *ngIf="inputTime.errors?.['required']">
+          Въведете време за приготвяне в минути!
+        </p>
+        <p class="error" *ngIf="inputTime.errors?.['minlength']">
+          Времето трябва да е поне един символ!
+          {{inputTime.errors?.['minlength']['requiredLength']}} знака!
+        </p>
+      </ng-container>
+
+      
+      <p class="field field-icon">
+        <label for="img">Снимка: </label>
+        <input class="input-error" type="text" name="img" id="img" placeholder="https://..." #inputImg="ngModel" ngModel required minlength="3" />
+      </p>
+      <ng-container *ngIf="inputImg.touched">
+        <p class="error" *ngIf="inputImg.errors?.['required']">
+          Въведете снимка!
+        </p>
+        <p class="error" *ngIf="inputImg.errors?.['minlength']">
+          Снимката трябва да е поне 3 символа!
+          {{inputImg.errors?.['minlength']['requiredLength']}} знака!
+        </p>
+      </ng-container>
+            
+      <p class="field field-icon">
+        <label for="text">Начин на приготвяне: </label>
+        <input class="input-error" type="text" name="text" id="text" placeholder="Рецептата се приготвя" #inputText="ngModel" ngModel required minlength="20" />
+      </p>
+      <ng-container *ngIf="inputText.touched">
+        <p class="error" *ngIf="inputText.errors?.['required']">
+          Опишете как се приготвя рецептата!
+        </p>
+        <p class="error" *ngIf="inputText.errors?.['minlength']">
+          Описанието е поне {{inputText.errors?.['minlength']['requiredLength']}} знака!
+        </p>
+      </ng-container>
+
+      <button
         [disabled]="form.invalid"
-        [style]="{backgroundColor : form.invalid ? 'lightgray' : 'lightgreen'}"
-        >Създай категория</button>
-  
-      </fieldset>
-    </form>
-    {{ form.value | json }}
-  </div>
-  
+        [style]="{ backgroundColor: form.invalid ? 'lightgray' : 'lightgreen' }"
+      >
+        Създай рецепта
+      </button>
+    </fieldset>
+  </form>
+  {{ form.value | json }}
+</div>

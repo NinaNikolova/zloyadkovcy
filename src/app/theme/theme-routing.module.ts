@@ -4,6 +4,7 @@ import { ThemesComponent } from "../themes/themes.component";
 import { NewThemeComponent } from "./new-theme/new-theme.component";
 import { CurrentThemeComponent } from "./current-theme/current-theme.component";
 import { AuthActivate } from "../shared/guards/auth.activate";
+import { ThemeListComponent } from "../theme-list/theme-list.component";
 
 
 const routes: Routes = [
@@ -14,11 +15,12 @@ const routes: Routes = [
         {
           path: '',
           pathMatch: 'full',
-          component: ThemesComponent,
+          component: ThemeListComponent,
           data:{
             title: 'Категории'
           },
         },
+
         {
           path: ':themeId',
           component: CurrentThemeComponent,
@@ -26,16 +28,24 @@ const routes: Routes = [
             title: "Рецептите от категорията"
           },
         },
+        {
+          path: 'new-theme',
+          component: NewThemeComponent,
+          data:{
+            title: "Създай рецепта"
+          },
+        },
+
       ],
     },
-    {
-      path: 'add-theme',
-      component: NewThemeComponent,
-      data:{
-        title: 'Създаване нова тема'
-      },
-      canActivate: [AuthActivate],
-    },
+    // {
+    //   path: 'add-theme',
+    //   component: NewThemeComponent,
+    //   data:{
+    //     title: 'Създаване нова тема'
+    //   },
+    //   canActivate: [AuthActivate],
+    // },
   ];
   
 

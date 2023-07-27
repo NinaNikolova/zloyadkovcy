@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './core/home/home.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
-import { PostListComponent } from './post-list/post-list.component';
+
 import { ErrorComponent } from './core/error/error.component';
 
 const routes: Routes = [

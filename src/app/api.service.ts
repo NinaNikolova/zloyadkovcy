@@ -15,9 +15,10 @@ export class ApiService {
     const { apiUrl } = environment;
     return this.http.get<Theme>(`${apiUrl}/themes/${id}`);
   }
-  createTheme(themeName:string) {
+    // title, category, img,time,ingredients,  text, userId
+  createTheme(title:string, category:string, img:string, time:number, ingredients: string, text:string, userId:string) {
     const { apiUrl } = environment;
-    return this.http.post<Theme>('/api/themes', {themeName});
+    return this.http.post<Theme>('/api/themes', {title, category, img,time,ingredients,  text, userId});
   }
 
   getThemes() {
@@ -31,8 +32,9 @@ export class ApiService {
 
     return this.http.get<Post[]>(`${apiUrl}/posts${limitFilter}`);
   }
+
   createPost(title:string, time:number, img:string, text:string, themeId:string, userId:string) {
     const { apiUrl } = environment;
-    return this.http.post<Theme>('/api/posts', {title, time, img, text, themeId, userId});
+    return this.http.post<Theme>(`${apiUrl}/themes/${themeId}/posts`, {title, time, img, text, themeId, userId});
   }
 }
