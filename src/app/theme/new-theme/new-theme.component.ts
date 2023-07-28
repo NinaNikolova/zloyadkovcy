@@ -11,15 +11,21 @@ import { UserService } from 'src/app/user/user.service';
 })
 export class NewThemeComponent {
   constructor(private apiService: ApiService, private router: Router, private userService: UserService){}
-  createTheme(form: NgForm):void{
+  categories: string[] = ['Закуски и тестени', 'Салати', 'Супички', 'Основни с месо', 'Основни без месо', 'Десерти','Напитки'];
+  
+         
+
+  createThemeHandler(form: NgForm):void{
     if(form.invalid){
       return;
     }
     const userId = this.userService.user?._id
+    console.log(userId)
+
     // title, category, img,time,ingredients,  text,
-    const {title, category, img,time,ingredients, text} = form.value;
-    this.apiService.createTheme(title, category, img,time,ingredients, text, userId!).subscribe(()=>{
-      this.router.navigate(['/posts'])
+    const {title, category, img, time,ingredients, text} = form.value;
+    this.apiService.createTheme(title, category, img, time, ingredients, text, userId!).subscribe(()=>{
+      this.router.navigate(['/themes'])
     })
 
   }

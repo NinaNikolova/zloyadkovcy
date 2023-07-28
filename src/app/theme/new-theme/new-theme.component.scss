@@ -78,10 +78,12 @@ p.error {
     padding-top: 0;
 }
 
-.input-error {
-    border-left-color: red;
-}
-label{
-    width:30%;
+
+label {
+
     color:green;
+}
+.input-field{
+    display: inline-block;
+ 
 }

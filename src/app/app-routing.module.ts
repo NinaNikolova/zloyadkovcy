@@ -8,7 +8,6 @@ import { ErrorComponent } from './core/error/error.component';
 const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
     component: HomeComponent,
     data:{
       title: 'Начало'

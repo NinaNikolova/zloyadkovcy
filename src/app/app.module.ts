@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './core/home/home.component';
-import { LoaderComponent } from './shared/loader/loader.component';
 import { SharedModule } from './shared/shared.module';
 import { API_ERROR } from './shared/constants';
 import { BehaviorSubject } from 'rxjs';
@@ -16,6 +15,7 @@ import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
 import { appInterceptorProvider } from './app-interceptor';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
+
 
 
 
@@ -29,7 +29,7 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
   ],
   imports: [
     BrowserModule,
-       CoreModule,
+    CoreModule,
     HttpClientModule,
     SharedModule,
     CoreModule,
@@ -39,7 +39,7 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
 
 
   ],
-  providers:[appInterceptorProvider],
+  providers: [appInterceptorProvider],
   bootstrap: [AppComponent],
   exports: []
 })

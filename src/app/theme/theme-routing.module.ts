@@ -8,49 +8,41 @@ import { ThemeListComponent } from "../theme-list/theme-list.component";
 
 
 const routes: Routes = [
-    {
-      path: 'themes',
-      children: [
-        
-        {
-          path: '',
-          pathMatch: 'full',
-          component: ThemeListComponent,
-          data:{
-            title: 'Категории'
-          },
+  {
+    path: 'themes',
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        component: ThemeListComponent,
+        data: {
+          title: 'Категории'
         },
+      },
 
-        {
-          path: ':themeId',
-          component: CurrentThemeComponent,
-          data:{
-            title: "Рецептите от категорията"
-          },
+     
+      {
+        path: 'create-theme',
+        component: NewThemeComponent,
+        data: {
+          title: "Създай рецепта"
         },
-        {
-          path: 'new-theme',
-          component: NewThemeComponent,
-          data:{
-            title: "Създай рецепта"
-          },
+      },
+      {
+        path: ':themeId',
+        component: CurrentThemeComponent,
+        data: {
+          title: "Цялата рецепта"
         },
+      },
+    ],
+  },
 
-      ],
-    },
-    // {
-    //   path: 'add-theme',
-    //   component: NewThemeComponent,
-    //   data:{
-    //     title: 'Създаване нова тема'
-    //   },
-    //   canActivate: [AuthActivate],
-    // },
-  ];
-  
+];
+
 
 @NgModule({
-    imports: [RouterModule.forChild(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class ThemeRoutingModule { }

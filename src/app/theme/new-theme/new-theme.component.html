@@ -1,10 +1,10 @@
 <div class="container">
-  <form class="new-post" #form="ngForm" (ngSubmit)="createTheme(form)">
+  <form class="new-post" #form="ngForm" (ngSubmit)="createThemeHandler(form)">
     <fieldset>
       <h2>Създайте нова рецепта:</h2>
   
 <!-- TITLE -->
-      <p class="field field-icon">
+      <p class="input-field">
         <label for="title">Заглавие: </label>
         <input class="input-error" type="title" name="title" id="title" placeholder="Яйца на очи" #inputTitle="ngModel" ngModel required minlength="2"
         />
@@ -19,17 +19,12 @@
         </p>
       </ng-container>
 <!-- CATEGORY -->
-      <p class="field field-icon">
+      <p class="input-field">
         <label for="category">Категория: </label>
-
-        <select id="category"  class="input-error" type="text" name="category" id="category" placeholder="Яйца на очи" #inputCategory="ngModel" ngModel required >
-          <option value="Закуски и тестени">Закуски и тестени</option>
-          <option value="Салати">Салати</option>
-          <option value="Супички">Супички</option>
-          <option value="Основни с месо">Основни с месо</option>
-          <option value="Основни без месо">Основни без месо</option>
-          <option value="Десерти">Десерти</option>
-          <option value="Напитки">Напитки</option>
+        <select id="category" type="text" name="category" id="category" placeholder="Основни ястия" #inputCategory="ngModel"  ngModel required >
+          <option *ngFor="let item of categories" [value]="item">
+      {{item}}
+    </option>
        
         </select>
       </p>
@@ -39,10 +34,10 @@
         </p>
        
       </ng-container>
-
-      <p class="field field-icon">
+<!-- TIME -->
+      <p class="input-field">
         <label for="time">Време за приготвяне: </label>
-        <input class="input-error" type="number" name="time" id="time" placeholder="10" #inputTime="ngModel" ngModel required minlength="1" />
+        <input type="number" name="time" id="time" placeholder="10" #inputTime="ngModel" ngModel required minlength="1" />
       </p>
       <ng-container *ngIf="inputTime.touched">
         <p class="error" *ngIf="inputTime.errors?.['required']">
@@ -54,10 +49,10 @@
         </p>
       </ng-container>
 
-      
-      <p class="field field-icon">
+      <!--IMG  -->
+      <p class="input-field">
         <label for="img">Снимка: </label>
-        <input class="input-error" type="text" name="img" id="img" placeholder="https://..." #inputImg="ngModel" ngModel required minlength="3" />
+        <input type="text" name="img" id="img" placeholder="https://..." #inputImg="ngModel" ngModel required minlength="3" />
       </p>
       <ng-container *ngIf="inputImg.touched">
         <p class="error" *ngIf="inputImg.errors?.['required']">
@@ -68,8 +63,22 @@
           {{inputImg.errors?.['minlength']['requiredLength']}} знака!
         </p>
       </ng-container>
-            
-      <p class="field field-icon">
+       <!--INGREDIENTS -->
+       <p class="input-field">
+        <label for="ingredients">Необходими продукти: </label>
+        <input type="text" name="ingredients" id="ingredients" placeholder="Сол, захар..." #inputIngeredients="ngModel" ngModel required minlength="10" />
+      </p>
+      <ng-container *ngIf="inputIngeredients.touched">
+        <p class="error" *ngIf="inputIngeredients.errors?.['required']">
+          Въведете необходими продукти!
+        </p>
+        <p class="error" *ngIf="inputIngeredients.errors?.['minlength']">
+          Полетето 'Необходими продукти" е поне {{inputIngeredients.errors?.['minlength']['requiredLength']}} знака!
+        </p>
+      </ng-container>
+
+            <!--TEXT  -->
+      <p class="input-field">
         <label for="text">Начин на приготвяне: </label>
         <input class="input-error" type="text" name="text" id="text" placeholder="Рецептата се приготвя" #inputText="ngModel" ngModel required minlength="20" />
       </p>

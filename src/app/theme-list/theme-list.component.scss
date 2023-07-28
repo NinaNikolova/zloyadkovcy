@@ -1,8 +1,9 @@
 .cards{
   display: flex;
-  flex-direction: row;
+ flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+
   // align-items: center;
   list-style: none;
  
@@ -46,8 +47,10 @@ h6{
 h3{
   color:#6c8b47
 }
-.container{
+.container {
 display: flex;
+flex-wrap: wrap;
+
 
 }
 .container .cards .card .created {

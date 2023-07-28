@@ -3,11 +3,7 @@ import { Theme } from "./theme";
 
 export interface Post {
     _id:string;
-    title: string;
-    ingredients: string;
-    time:string,
-    img:string;    
-    text: string;
+     postText: string;
     likes: User[];
     userId: User;
     themeId: Theme;

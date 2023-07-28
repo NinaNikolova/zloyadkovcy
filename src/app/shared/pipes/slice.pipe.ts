@@ -7,7 +7,7 @@ import { max } from 'rxjs';
 export class SlicePipe implements PipeTransform {
 
   transform(value: string, maxCharCount=100): unknown {
-    return `${value.substring(0, maxCharCount)}${value.length>maxCharCount ? "..." : ''}`;
+    return `${value.substring(0, maxCharCount)}${value.length > maxCharCount ? "..." : ''}`;
   }
 
 }

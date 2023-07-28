@@ -6,7 +6,7 @@ import { UserService } from '../user/user.service';
   templateUrl: './authenticate.component.html',
   styleUrls: ['./authenticate.component.scss']
 })
-export class AuthenticateComponent implements OnInit {
+export class AuthenticateComponent implements OnInit{
   isAuthenticating = true;
 
   constructor(private userService: UserService) {}

@@ -1,5 +1,6 @@
-import { User } from "./user";
 import { Post } from "./post";
+import { User } from "./user";
+
   // title, category, img,time,ingredients,  text, userId
 
 export interface Theme{
@@ -11,7 +12,7 @@ export interface Theme{
     ingredients: string;
     text: string;
     userId:User;
-    posts: Post[];
+    posts:Post[];
     created_at: string;
     updatedAt: string;
     _v:number;

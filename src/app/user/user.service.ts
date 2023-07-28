@@ -6,7 +6,7 @@ import { BehaviorSubject, Subscription, tap } from 'rxjs';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService implements OnDestroy {
   private user$$ = new BehaviorSubject<User | undefined>(undefined);
@@ -38,7 +38,7 @@ export class UserService implements OnDestroy {
     email: string,
     password: string,
     rePass: string,
-    
+  
   ) {
     return this.http
       .post<User>('/api/register', {
@@ -63,9 +63,9 @@ export class UserService implements OnDestroy {
       .pipe(tap((user) => this.user$$.next(user)));
   }
 
-  updateProfile(username: string, email: string) {
+  updateProfile(username: string, email: string, tel?: string) {
     return this.http
-      .put<User>('/api/users/profile', { username, email })
+      .put<User>('/api/users/profile', { username, email, tel })
       .pipe(tap((user) => this.user$$.next(user)));
   }
 
@@ -73,3 +73,4 @@ export class UserService implements OnDestroy {
     this.subscription.unsubscribe();
   }
 }
+
