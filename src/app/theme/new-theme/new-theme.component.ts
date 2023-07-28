@@ -20,7 +20,7 @@ export class NewThemeComponent {
       return;
     }
     const userId = this.userService.user?._id
-    console.log(userId)
+
 
     // title, category, img,time,ingredients,  text,
     const {title, category, img, time,ingredients, text} = form.value;

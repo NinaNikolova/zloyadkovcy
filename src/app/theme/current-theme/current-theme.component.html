@@ -1,15 +1,15 @@
 <div class="container">
+   <div class="card">
   <h2>{{ theme?.title }}</h2>
   <!-- TODO after first post theme - see workshop forms last 20 min  -->
   <a *ngIf="isOwner">Коригирай категорията</a>
-  <ul class="cards" >
-    <li class="card">
+
+
       <img src="{{ theme?.img }}" alt="{{ theme?.title }}" style="width: 100%" />
       <h6>{{ theme?.title }}</h6>
       <p class="time">Време на приготвяне в минути: {{ theme?.time }}</p>
       <p>Съставки: {{ theme?.ingredients }}</p>
       <p>Начин на приготвяне: {{ theme?.text }}</p>
-      <a>Вижте цялата рецепта...</a>
-    </li>
-  </ul>
+      
+</div>
 </div>

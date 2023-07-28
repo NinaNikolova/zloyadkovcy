@@ -16,7 +16,7 @@ const routes: Routes = [
         pathMatch: 'full',
         component: ThemeListComponent,
         data: {
-          title: 'Категории'
+          title: 'Всички рецепти'
         },
       },
 

@@ -9,7 +9,9 @@
                 <p class="time">Време на приготвяне в минути: {{post.time}} </p>
                 <p>Съставки: {{post.ingredients | slice}}</p>
                 <p>Начин на приготвяне: {{post.text | slice}}</p>
-                <a>Вижте цялата рецепта...</a>   
+                <a routerLink="/themes/{{post?._id}}">Вижте цялата рецепта...</a>   
         </li>
     </ul>
     </div>
+
+        

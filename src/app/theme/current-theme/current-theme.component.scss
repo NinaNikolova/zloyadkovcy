@@ -19,20 +19,11 @@ h2{
     color:#6c8b47;
     text-align: center;
 }
-.cards{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  // align-items: center;
-  list-style: none;
 
-  
-}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  min-width: 240px;
-  max-width: 300px;
+  min-width: 360px;
+max-width: 700px;
   margin: auto;
   text-align: center;
   font-family: arial;
@@ -68,4 +59,7 @@ h6{
 h2{
   color:#6c8b47
 
+}
+.container{
+  display: flex;
 }
