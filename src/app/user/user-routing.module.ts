@@ -2,8 +2,8 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
+import { ProfileComponent } from "./profile/profile.component";
 
-import { AuthActivate } from "../shared/guards/auth.activate";
 
 const routes: Routes = [
     {
@@ -21,6 +21,15 @@ const routes: Routes = [
       component: RegisterComponent,
       data:{
         title: 'Регистрирай се'
+      },
+      // canActivate:[AuthActivate]
+    },
+    {
+      path: 'profile',
+     
+      component: ProfileComponent,
+      data:{
+        title: 'Твоя профил'
       },
       // canActivate:[AuthActivate]
     },

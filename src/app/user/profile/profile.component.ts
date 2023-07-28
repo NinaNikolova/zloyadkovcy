@@ -9,32 +9,25 @@ import { Theme } from 'src/app/shared/interfaces/theme';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit{
-  constructor(private userService: UserService, private router: Router, private apiService: ApiService){}
-  themeList: Theme[] = [];
-  isLoading: boolean = true;
+export class ProfileComponent{
+  constructor(private userService: UserService, private router: Router){}
+  // themeList: Theme[] = [];
+  // isLoading: boolean = true;
   get username():string{
-    console.log(this.userService.user)
+    
     return this.userService.user?.username || ''
   }
+  get themes():Theme[] | any{
+        return this.userService.user?.themes || ''
+  }
+
   get email():string{
     return this.userService.user?.email || ''
   }
   get isLogged(): boolean {
     return this.userService.isLogged;
   }
+ 
   
-  ngOnInit(): void {
-    this.apiService.getThemes().subscribe({
-      next: (themes) => {
-        this.themeList = themes;
-        this.isLoading = false;
-        console.log(themes)
-      },
-      error: (err) => {
-        this.isLoading = false;
-        console.error(`Error: ${err}`);
-      },
-    });
-  }
+ 
 }

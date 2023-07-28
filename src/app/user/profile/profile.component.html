@@ -20,5 +20,12 @@
             <p>{{email}}</p>
         </div>
         
+        
     </div>
+    <div *ngIf="themes?.length==0">Вие, {{username}}, нямате още публикувани рецепти</div>
+    <div *ngIf="themes?.length>0">
+          <ul *ngFor="let theme of themes; let i = index">
+            <li><a routerLink="/themes/{{theme?._id}}">Рецепта {{i+1}}</a></li>
+          </ul>
+        </div>
 </div>
