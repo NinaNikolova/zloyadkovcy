@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { Theme } from 'src/app/shared/interfaces/theme';
 import { UserService } from 'src/app/user/user.service';
@@ -14,8 +14,10 @@ export class CurrentThemeComponent implements OnInit{
 
   constructor(
     private apiService: ApiService,
-    private activatedRoute: ActivatedRoute,
-    private userService: UserService
+      private userService: UserService,
+      private router: Router,
+      private activatedRoute:ActivatedRoute
+
   ) {}
 
   get isLogged(): boolean {
@@ -29,15 +31,22 @@ export class CurrentThemeComponent implements OnInit{
   ngOnInit(): void {
     this.fetchTheme();
   }
-
+  id = this.activatedRoute.snapshot.params['themeId'];
   fetchTheme(): void {
-    const id = this.activatedRoute.snapshot.params['themeId'];
+ 
 
-    this.apiService.getTheme(id).subscribe((theme) => {
+    this.apiService.getTheme(this.id).subscribe((theme) => {
         
       this.theme = theme;
     
     });
   }
+
+  // deleteCurrentTheme(id: string) {
+  //   this.apiService.delTheme(id).subscribe((theme)=>{
+  //     console.log('Рецептата е изтрита');
+  //     this.router.navigate(['/themes'])
+  // });
+  // }
   
 }
