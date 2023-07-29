@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 import { UserService } from '../user.service';
 import { Theme } from 'src/app/shared/interfaces/theme';
@@ -10,7 +10,7 @@ import { Theme } from 'src/app/shared/interfaces/theme';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent{
-  constructor(private userService: UserService, private router: Router){}
+  constructor(private userService: UserService, private router: Router, activateRoute: ActivatedRoute){}
   // themeList: Theme[] = [];
   // isLoading: boolean = true;
   get username():string{
@@ -20,7 +20,7 @@ export class ProfileComponent{
   get themes():Theme[] | any{
         return this.userService.user?.themes || ''
   }
-
+  
   get email():string{
     return this.userService.user?.email || ''
   }

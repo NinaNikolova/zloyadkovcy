@@ -10,7 +10,7 @@ import { SharedModule } from './shared/shared.module';
 import { API_ERROR } from './shared/constants';
 import { BehaviorSubject } from 'rxjs';
 import { ThemeListComponent } from './theme-list/theme-list.component';
-import { ThemesComponent } from './themes/themes.component';
+
 import { UserModule } from './user/user.module';
 import { ThemeModule } from './theme/theme.module';
 import { appInterceptorProvider } from './app-interceptor';
@@ -23,7 +23,6 @@ import { AuthenticateComponent } from './authenticate/authenticate.component';
   declarations: [
     AppComponent,
     ThemeListComponent,
-    ThemesComponent,
     AuthenticateComponent,
 
   ],

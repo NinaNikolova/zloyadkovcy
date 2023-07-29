@@ -3,7 +3,7 @@
     
     <ul class="cards" *ngFor="let post of themesList">
         <li class="card">
-                       <img src="{{post.img}}" alt="{{post.title}}" style="width:100%">
+                       <img src="{{post.img}}" alt="{{post.title | uppercase}}" style="width:100%">
                 <h6>{{post.title}}</h6>
                 <span class="created">Публкувана в: {{post.created_at.substring(0,10)}}</span>
                 <p class="time">Време на приготвяне в минути: {{post.time}} </p>
