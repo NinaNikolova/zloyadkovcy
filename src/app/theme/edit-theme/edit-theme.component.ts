@@ -25,7 +25,7 @@ export class EditThemeComponent implements OnInit{
     this.fetchTheme()
   }
   userId = this.userService.user?._id;
-  themeId = this.activatedRoute.snapshot.params['themeId'];
+  themeId = this.activatedRoute.snapshot.params['themeId'] 
   fetchTheme(): void {
 
     this.apiService.getTheme(this.themeId).subscribe((theme) => {
@@ -42,7 +42,8 @@ export class EditThemeComponent implements OnInit{
    
        // title, category, img,time,ingredients,  text,
     const { title, category, img, time, ingredients, text } = form.value;
-    this.apiService.editTheme(this.themeId, title, category, img, time, ingredients, text).subscribe(() => {
+    const themeId = this.activatedRoute.snapshot.params['themeId'];
+    this.apiService.editTheme(themeId, title, category, img, time, ingredients, text, this.userId!).subscribe(() => {
       this.router.navigate([`/themes/${this.themeId}`])
     })
 
