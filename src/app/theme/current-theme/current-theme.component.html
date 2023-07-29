@@ -10,6 +10,7 @@
       <p class="time">Време на приготвяне в минути: {{ theme?.time }}</p>
       <p>Съставки: {{ theme?.ingredients }}</p>
       <p>Начин на приготвяне: {{ theme?.text }}</p>
-      <button (click)="deleteCurrentTheme()">Изтрийте рецептата</button>
+      <button (click)="deleteCurrentTheme()">Изтрийте</button>
+      <a routerLink="/themes/edit-theme/{{theme?._id}}">Корегирайте</a>
 </div>
 </div>

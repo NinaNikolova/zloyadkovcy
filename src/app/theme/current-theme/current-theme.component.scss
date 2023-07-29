@@ -5,8 +5,19 @@
     border-radius: 5px;
     
   }
-  a{
+  .card a, .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    
+    color: white;
+    background-color: lightgreen;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    font-size: 18px;
     text-decoration: none;
+    margin: 10px;
   }
   .success {
     background-color: lightgreen;
@@ -41,19 +52,9 @@ h6{
   font-size: 16px;
 }
 
-.card a {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: lightgreen;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
 
-.card a:hover {
+
+.card a:hover, .card button:hover {
   opacity: 0.7;
 }
 h2{
@@ -62,4 +63,5 @@ h2{
 }
 .container{
   display: flex;
+  justify-content: center;
 }
