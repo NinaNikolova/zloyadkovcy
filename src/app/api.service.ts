@@ -19,11 +19,11 @@ export class ApiService {
 
  
 
-  // delTheme(id:string, userId:string) {
+  delTheme(id: string) {
 
-  //   const { apiUrl } = environment;
-  //   return this.http.delete<Theme>(`${apiUrl}/themes/${id}`);
-  // }
+  
+    return this.http.delete<Theme>(`/api/themes/${id}`);
+  }
     // title, category, img,time,ingredients,  text, userId
   createTheme(title:string, category:string, img:string, time:number, ingredients: string, text:string, userId:string) {
     const { apiUrl } = environment;

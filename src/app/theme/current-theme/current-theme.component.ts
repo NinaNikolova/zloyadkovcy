@@ -9,22 +9,22 @@ import { UserService } from 'src/app/user/user.service';
   templateUrl: './current-theme.component.html',
   styleUrls: ['./current-theme.component.scss']
 })
-export class CurrentThemeComponent implements OnInit{
+export class CurrentThemeComponent implements OnInit {
   theme: Theme | undefined;
 
   constructor(
     private apiService: ApiService,
-      private userService: UserService,
-      private router: Router,
-      private activatedRoute:ActivatedRoute
+    private userService: UserService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
 
-  ) {}
+  ) { }
 
   get isLogged(): boolean {
     return this.userService.isLogged;
   }
-  get isOwner():boolean{
-    return this.userService.user?._id===this.theme?.userId;
+  get isOwner(): boolean {
+    return this.userService.user?._id === this.theme?.userId;
   }
 
 
@@ -33,20 +33,25 @@ export class CurrentThemeComponent implements OnInit{
   }
   id = this.activatedRoute.snapshot.params['themeId'];
   fetchTheme(): void {
- 
+
 
     this.apiService.getTheme(this.id).subscribe((theme) => {
-        
+
       this.theme = theme;
-    
+
     });
   }
 
-  // deleteCurrentTheme(id: string) {
-  //   this.apiService.delTheme(id).subscribe((theme)=>{
-  //     console.log('Рецептата е изтрита');
-  //     this.router.navigate(['/themes'])
-  // });
-  // }
-  
+  deleteCurrentTheme() {
+    this.apiService.delTheme(this.id).subscribe(
+      (theme) => {
+        console.log('Рецептата е изтрита');
+        this.router.navigate(['/themes'])
+      },
+      (error)=>{
+        console.error('Error occurred during theme deletion:', error)
+      }
+    );
+  }
+
 }
