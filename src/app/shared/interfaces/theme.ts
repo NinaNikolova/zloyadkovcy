@@ -12,7 +12,7 @@ export interface Theme{
     ingredients: string;
     text: string;
     userId:User;
-    posts:Post[];
+    posts:Post[] | '';
     created_at: string;
     updatedAt: string;
     _v:number;

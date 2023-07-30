@@ -32,6 +32,7 @@ export class ApiService {
     const { apiUrl } = environment;
     return this.http.get<Theme[]>(`${apiUrl}/themes`);
   }
+  
 
   editTheme(id: string, title: string, category: string, img: string, time: number, ingredients: string, text: string, userId: string) {
 
