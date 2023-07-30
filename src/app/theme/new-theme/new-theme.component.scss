@@ -1,17 +1,29 @@
-/*login register forms  */
 
 form.new-theme {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+
+    flex-wrap: wrap;
     min-width: 360px;
+
     display:flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
     margin: 2em auto;
-    
+    height: 77vh;
+    z-index: 1;
 }
 
+.new-theme fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.3em;
+    padding: 0.8em;
+    background-color: #ffffff;
+}
 
 .new-theme h2 {
     padding-top: 0;
@@ -28,7 +40,8 @@ form.new-theme {
     flex: 0 1 100%;
     border: 1px solid green;
     padding: 0.3em;
-      border-radius: 0.3em;
+  width: 360px;
+    border-radius: 0.3em;
   
 }
 
@@ -72,10 +85,14 @@ p.error {
     padding-top: 0;
 }
 
-
+.text{
+    width: 360px;
+    height: 250px;
+}
 .new-theme label {
-    color:green;
 
+    color:green;
+    width: 150px;
 }
 .input-field{
     display: inline-block;

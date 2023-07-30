@@ -23,9 +23,7 @@ export class CurrentThemeComponent implements OnInit {
   get isLogged(): boolean {
     return this.userService.isLogged;
   }
-  get isOwner(): boolean {
-    return this.userService.user?._id === this.theme?.userId;
-  }
+ 
 
 
   ngOnInit(): void {
@@ -41,6 +39,9 @@ export class CurrentThemeComponent implements OnInit {
 
     });
   }
+   get isOwner(): boolean {
+    return this.userService.user?._id === this.theme?.userId;
+  }
 
   deleteCurrentTheme() {
     this.apiService.delTheme(this.id).subscribe(
@@ -48,7 +49,7 @@ export class CurrentThemeComponent implements OnInit {
         console.log('Рецептата е изтрита');
         this.router.navigate(['/themes'])
       },
-      (error)=>{
+      (error) => {
         console.error('Error occurred during theme deletion:', error)
       }
     );

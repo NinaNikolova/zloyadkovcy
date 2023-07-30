@@ -24,12 +24,12 @@
   
 
     <div>
-        <p *ngIf="!isLoggedIn">Ако искате да споделите тук изпитана вкусна рецепта, моля, <a routerLink="/login">да влезете в профила си<i class="fas fa-sign-in-alt"></i></a>, или ако нямате, трябва <a routerLink="/register" >да се регистрирате <i class="fas fa-user-plus"></i></a>! </p>
+        <p *ngIf="!isLoggedIn">Ако искате да споделите тук изпитана вкусна рецепта, моля, <a routerLink="/login"> влезте в профила си<i class="fas fa-sign-in-alt"></i></a>, или ако нямате профил, моля, <a routerLink="/register" >регистрирайте се<i class="fas fa-user-plus"></i></a>! </p>
         
-        <a *ngIf="isLoggedIn" routerLink="/new-post">Добавите рецепта</a>
-        <a  *ngIf="isLoggedIn" routerLink="/new-theme">Добавите категория</a>
-        <p *ngIf="!isLoggedIn">Ако искате да само да разгледате и да откриете рецепта за злоядковци-бърза, лесна и вкусна тук, заповядайте!  </p>
-        <a *ngIf="!isLoggedIn" routerLink="/posts">Разгледайте рецептите&hellip;</a>
+        <a *ngIf="isLoggedIn" routerLink="/themes/create-theme">Добавите рецепта</a>
+       
+        
+        <a *ngIf="!isLoggedIn" routerLink="/themes">Разгледайте рецептите&hellip;</a>
 
     </div>
     <div class="container">

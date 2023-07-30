@@ -19,6 +19,7 @@ export class ProfileComponent{
   }
   get themes():Theme[] | any{
         return this.userService.user?.themes || ''
+        
   }
   
   get email():string{
