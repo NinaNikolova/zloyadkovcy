@@ -16,6 +16,7 @@
 ### - Download the project and install the dependencies `npm i`
 ### - Start project - Run `ng serve` - Navigate to `http://localhost:4200/`. 
 
-## To start the Rest api/back-end of project/, which is here: https://github.com/NinaNikolova/restapi-zloyadkovci:
-### - Download the project and install the dependencies `npm i`
+## To start the Rest api/back-end of project/ 
+### - Download the rest api from here: https://github.com/NinaNikolova/restapi-zloyadkovci
+### - Install the dependencies `npm i`
 ### - Start project - Run `npm start` - Navigate to `http://localhost:4200/`. 
