@@ -1,13 +1,12 @@
-# `Бързо, лесно и вкусно за злоядковци` - a website for sharing recipes for non-eating and fussy children
+# `Бързо, лесно и вкусно за злоядковци`
 
-## The project is a SPA web application using Angular.
-
-## For its back-end I modified and used the rest api of the Angular cource workshop at SoftUni. 
-
-## I am using Mongoose /ODM library for MongoDB/
+### This is a website for sharing recipes for non-eating and fussy children
+### The project is a SPA web application using` Angular`.
+### For its back-end I modified and used the `Express.js rest api` of the Angular cource workshop at SoftUni. 
+### I am using `Mongoose /ODM library for MongoDB/`
 
 ### Home page
-/to get an idea of ​​the project :) /
+/to get an idea of ​​the project `😉` /
 ![image](https://github.com/NinaNikolova/zloyadkovcy/assets/40785979/1346847a-210c-48d1-a338-3e5930994215)
 
 
