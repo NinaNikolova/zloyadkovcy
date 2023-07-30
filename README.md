@@ -19,4 +19,4 @@
 ## To start the Rest api/back-end of project/ 
 ### - Download the rest api from here: https://github.com/NinaNikolova/restapi-zloyadkovci
 ### - Install the dependencies `npm i`
-### - Start project - Run `npm start` - Navigate to `http://localhost:4200/`. 
+### - To start project - Run `npm start` - Navigate to `http://localhost:4200/`. 
