@@ -14,10 +14,9 @@ export class ProfileComponent{
   // themeList: Theme[] = [];
   // isLoading: boolean = true;
   get username():string{
-    
-    return this.userService.user?.username || ''
+        return this.userService.user?.username || ''
   }
-  get themes():Theme[] | any{
+  get themes():string[] | any{
         return this.userService.user?.themes || ''
         
   }
