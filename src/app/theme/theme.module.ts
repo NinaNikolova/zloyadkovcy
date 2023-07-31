@@ -5,21 +5,22 @@ import { CurrentThemeComponent } from './current-theme/current-theme.component';
 import { ThemeRoutingModule } from './theme-routing.module';
 import { FormsModule } from '@angular/forms';
 import { EditThemeComponent } from './edit-theme/edit-theme.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
 
 @NgModule({
   declarations: [
-    NewThemeComponent,
     CurrentThemeComponent,
-    NewThemeComponent,
-    EditThemeComponent
+    EditThemeComponent,
+    NewThemeComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ThemeRoutingModule,
+    SharedModule
   ],
   exports:[NewThemeComponent, CurrentThemeComponent]
 })

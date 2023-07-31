@@ -37,8 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ThemeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
-
+  
   ],
   providers: [appInterceptorProvider],
   bootstrap: [AppComponent],
