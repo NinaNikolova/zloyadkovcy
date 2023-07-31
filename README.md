@@ -1,7 +1,7 @@
 # `Бързо, лесно и вкусно за злоядковци`
 
 ### - This is a website for sharing recipes for non-eating and fussy children
-### - The project is a SPA web application using` Angular`.
+### - The project is a SPA web application using ` Angular`, `TypeScript`, `HTML`, `CSS`, `Angular Material`.
 ### - For its back-end I modified and used the `Express.js rest api` of the Angular cource workshop at SoftUni. 
 ### - Database use `Mongoose /ODM library for MongoDB/`
 

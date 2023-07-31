@@ -10,6 +10,13 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from '../app-routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ErrorComponent } from './error/error.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 @NgModule({
     declarations: [
@@ -22,7 +29,14 @@ import { ErrorComponent } from './error/error.component';
     ],
     exports: [HeaderComponent, FooterComponent, PageNotFoundComponent, HomeComponent],
     imports: [
-        CommonModule, SharedModule, RouterModule, 
+        CommonModule, SharedModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatMenuModule,
+        RouterModule, 
     ]
 })
 export class CoreModule { }

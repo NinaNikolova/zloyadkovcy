@@ -1,12 +1,12 @@
-header {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap:20px;
-    padding: 10px;
-    background-color: #cccccc;
-    align-items: center;
-}
+// header {
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     gap:20px;
+//     padding: 10px;
+//     background-color: #cccccc;
+//     align-items: center;
+// }
 
 
 header img {
@@ -16,14 +16,15 @@ header img {
     border-radius: 10px;
 }
 
-h6 a {
-    font-size: 22px;
-    text-decoration: none;
+h1 a {
+    font-size: 28px;
+     text-decoration: none;
+   
 
     color: orange;
 }
 
-h6 a:visited {
+h1 a:visited {
     color: #6c8b47;
 }
 h6 a:hover {
@@ -32,14 +33,14 @@ h6 a:hover {
 
 nav {
     display: flex;
-   flex-wrap: wrap;
-gap:10px;
+   justify-content: space-between;
+
   
 }
 
 
 nav a {
-    display: inline-block;
+
     background-color: lightgreen;
     padding: 8px 16px;
     margin: 0 8px;
@@ -63,3 +64,20 @@ a.active {
     background-color: #6c8b47;
     color: white;
 }
+nav div, h1{
+    display: inline-block;
+}
+
+@media screen and  (max-width: 1000px) {
+nav .show-menu {
+    display: none ;
+}
+  }
+
+  @media screen and  (min-width: 1000px) {
+    .small {
+        display: none;
+    }
+  }
+
+
