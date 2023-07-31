@@ -2,9 +2,13 @@
 <section id="home">
 
 
-  
+<br/>
+<br/>
+<br/>
+<br/>
     <h6>Здравейте, {{username}}! <i class="fa-regular fa-face-laugh-wink"></i></h6>
-
+<br/>
+<br/>
  
     <ul>
         <li> <i class="fas fa-pizza-slice"></i> Това е уебсайт за споделяне изпитани вкусни рецепти специално за злояди
@@ -22,7 +26,7 @@
     </ul>
 
   
-
+<br/>
     <div>
         <p *ngIf="!isLoggedIn">Ако искате да споделите тук изпитана вкусна рецепта, моля, <a routerLink="/login"> влезте в профила си<i class="fas fa-sign-in-alt"></i></a>, или ако нямате профил, моля, <a routerLink="/register" >регистрирайте се<i class="fas fa-user-plus"></i></a>! </p>
         
@@ -32,6 +36,7 @@
         <a *ngIf="!isLoggedIn" routerLink="/themes">Разгледайте рецептите&hellip;</a>
 
     </div>
+    <br/>
     <div class="container">
         <div class="coffee-header">
             <div class="coffee-header__buttons coffee-header__button-one"></div>
