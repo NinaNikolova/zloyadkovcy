@@ -28,6 +28,5 @@ export class ProfileComponent{
     return this.userService.isLogged;
   }
  
-  
  
 }

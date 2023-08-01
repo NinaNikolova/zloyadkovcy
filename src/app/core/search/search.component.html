@@ -1,0 +1,41 @@
+<div class="container">
+  <br />
+  <section>
+    <br />
+    <br />
+    <h5>Търсене по заглавие</h5>
+    <br />
+    <br />
+    <input
+      name="searchInput"
+      [(ngModel)]="searchInput"
+      type="text"
+      placeholder="Въведете заглавие на български език"
+      size="50"
+    />
+    <br />
+    <br />
+    <article>
+      <h5>Резултати от търсене по заглавие...</h5>
+      <div>
+      <ul class="cards" *ngFor="let post of themes | search : searchInput">
+        <li class="card">
+          <img
+            src="{{ post.img }}"
+            alt="{{ post.title | uppercase }}"
+            style="width: 100%"
+          />
+          <h6>{{ post.title }}</h6>
+          <span class="created"
+            >Публкувана в: {{ post.created_at.substring(0, 10) }}</span
+          >
+          <p class="time">Време на приготвяне в минути: {{ post.time }}</p>
+          <p>Съставки: {{ post.ingredients | slice }}</p>
+          <p>Начин на приготвяне: {{ post.text | slice }}</p>
+          <a routerLink="/themes/{{ post?._id }}">Вижте цялата рецепта...</a>
+        </li>
+      </ul>
+      </div>
+    </article>
+  </section>
+</div>

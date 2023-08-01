@@ -8,8 +8,8 @@
       <a routerLink="/" class="active">Начало</a>
 
       <a class="guest" routerLink="/themes">Всички pецепти</a>
-      <a *ngIf="isLoggedIn" class="user" routerLink="/themes/create-theme">Създай рецепта</a
-      >
+      <a *ngIf="isLoggedIn" class="user" routerLink="/themes/create-theme">Създай рецепта</a>
+      <a class="guest" routerLink="/search">Търсене</a>
     </div>
     <div>
       <a *ngIf="!isLoggedIn" class="green" routerLink="/login">Влез</a>
@@ -30,6 +30,7 @@
       <button routerLink="/" mat-menu-item>Начало</button>
       <button routerLink="/themes" mat-menu-item>Всички pецепти</button>
       <button *ngIf="isLoggedIn" routerLink="/themes/create-theme" mat-menu-item>Създай рецепта</button>
+      <button routerLink="/search" mat-menu-item>Търсене</button>
     </mat-menu>
   </div>
 </header>

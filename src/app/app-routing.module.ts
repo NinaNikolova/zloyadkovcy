@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './core/home/home.component';
 import { PageNotFoundComponent } from './core/page-not-found/page-not-found.component';
-
 import { ErrorComponent } from './core/error/error.component';
+import { SearchComponent } from './core/search/search.component';
+
 
 const routes: Routes = [
   {
@@ -14,7 +15,13 @@ const routes: Routes = [
     }
   },
   
-    
+  {
+    path: 'search',
+    component: SearchComponent,
+    data:{
+      title: 'Търсене'
+    }
+  },
   {
     path: 'not-found',
     component: PageNotFoundComponent,

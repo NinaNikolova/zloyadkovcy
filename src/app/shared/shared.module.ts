@@ -6,17 +6,19 @@ import { UppercasePipe } from './pipes/uppercase.pipe';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SearchPipe } from './pipes/search.pipe';
+
 
 
 
 @NgModule({
-  declarations: [SlicePipe, UppercasePipe, ConfirmationDialogComponent],
+  declarations: [SlicePipe, UppercasePipe, ConfirmationDialogComponent, SearchPipe],
   imports: [
     CommonModule,
     MatButtonModule,
     MatDialogModule,
     RouterModule
   ],
-  exports:[SlicePipe, UppercasePipe]
+  exports:[SlicePipe, UppercasePipe, SearchPipe]
 })
 export class SharedModule { }

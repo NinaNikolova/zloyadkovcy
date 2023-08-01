@@ -16,6 +16,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+import { SearchPipe } from '../shared/pipes/search.pipe';
+
+
+
 
 
 @NgModule({
@@ -25,7 +31,11 @@ import { MatMenuModule } from '@angular/material/menu';
         HomeComponent,
         PageNotFoundComponent,
         ErrorComponent,
-       
+        SearchComponent,
+ 
+    
+     
+
     ],
     exports: [HeaderComponent, FooterComponent, PageNotFoundComponent, HomeComponent],
     imports: [
@@ -36,7 +46,9 @@ import { MatMenuModule } from '@angular/material/menu';
         MatToolbarModule,
         MatIconModule,
         MatMenuModule,
-        RouterModule, 
+        FormsModule,
+        RouterModule,
+        
     ]
 })
 export class CoreModule { }
