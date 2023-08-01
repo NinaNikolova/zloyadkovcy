@@ -19,12 +19,11 @@ import { MatMenuModule } from '@angular/material/menu';
 import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from '../shared/pipes/search.pipe';
-
 import { NgIf } from '@angular/common';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -55,6 +54,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         MatInputModule,
         MatFormFieldModule,
         NgIf,
+        MatSelectModule,
         RouterModule,
 
 

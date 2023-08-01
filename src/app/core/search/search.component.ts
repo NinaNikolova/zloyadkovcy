@@ -11,12 +11,14 @@ import { Theme } from 'src/app/shared/interfaces/theme';
 export class SearchComponent implements OnInit{
   themes: Theme[] = [];
   searchInput: string |any;
+  searchInput1: string |any;
+  categories: string[] = ['Закуски и тестени', 'Салати', 'Супички', 'Основни с месо', 'Основни без месо', 'Десерти', 'Напитки'];
   constructor(
     private apiService: ApiService,
     private activatedRoute: ActivatedRoute,
   ) {}
 
-
+ 
 
   ngOnInit(): void {
     this.apiService.getThemes().subscribe({
