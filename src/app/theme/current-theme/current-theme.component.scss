@@ -44,7 +44,8 @@ max-width: 700px;
 
 }
 h6{
-  color:#6c8b47
+  color:#6c8b47;
+  font-weight: 500;
 }
 
 .time {
@@ -64,4 +65,9 @@ h2{
 .container{
   display: flex;
   justify-content: center;
+}
+ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

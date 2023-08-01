@@ -7,11 +7,16 @@
 
       <img src="{{ theme?.img }}" alt="{{ theme?.title }}" style="width: 100%" />
       <h6> Категория: {{ theme?.category }}</h6>
-      <p class="time"><span class="material-symbols-outlined">
+      <h6 class="time"><span class="material-symbols-outlined">
         schedule
-        </span> Време на приготвяне в минути: {{ theme?.time }}</p>
-      <p> Съставки: {{ theme?.ingredients }}</p>
-      <p>Начин на приготвяне: {{ theme?.text }}</p>
+        </span> Време на приготвяне в минути: {{ theme?.time }}</h6>
+        <h6>Съставки: </h6>
+        <ul *ngFor="let ingredient of (theme?.ingredients | list)"> 
+      
+      <li>  {{ ingredient }} </li>
+      </ul>
+      <h6>Начин на приготвяне: </h6>
+      <p>{{ theme?.text }}</p>
       <div *ngIf="isOwner">
       <button (click)="deleteCurrentTheme()">Изтрийте</button>
       <a routerLink="/themes/edit-theme/{{theme?._id}}">Корегирайте</a>
