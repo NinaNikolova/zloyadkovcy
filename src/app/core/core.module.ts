@@ -20,6 +20,11 @@ import { SearchComponent } from './search/search.component';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from '../shared/pipes/search.pipe';
 
+import { NgIf } from '@angular/common';
+
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 
@@ -32,9 +37,9 @@ import { SearchPipe } from '../shared/pipes/search.pipe';
         PageNotFoundComponent,
         ErrorComponent,
         SearchComponent,
- 
-    
-     
+
+
+
 
     ],
     exports: [HeaderComponent, FooterComponent, PageNotFoundComponent, HomeComponent],
@@ -47,8 +52,13 @@ import { SearchPipe } from '../shared/pipes/search.pipe';
         MatIconModule,
         MatMenuModule,
         FormsModule,
+        MatInputModule,
+        MatFormFieldModule,
+        NgIf,
         RouterModule,
-        
+
+
+
     ]
 })
 export class CoreModule { }

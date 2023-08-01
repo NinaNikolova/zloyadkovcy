@@ -1,3 +1,7 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
 .cards{
     display: flex;
    flex-direction: row;
@@ -56,8 +60,11 @@
   font-size: 9px;
   font-style: italic;
   }
+  .example-form-field {
+    width: 360px;
+  }
   
-  @media (max-width: 1000px) {
+  @media screen and (max-width: 400px) {
   
     .cards{
       flex-direction: column;
@@ -67,9 +74,10 @@
   
     }
   }
-  @media (min-width: 1000px) {
+  @media screen and (min-width: 400px) {
 
     .cards{
+        flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
   

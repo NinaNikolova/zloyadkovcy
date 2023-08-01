@@ -6,18 +6,19 @@
     <h5>Търсене по заглавие</h5>
     <br />
     <br />
-    <input
-      name="searchInput"
-      [(ngModel)]="searchInput"
-      type="text"
-      placeholder="Въведете заглавие на български език"
-      size="50"
-    />
+    <mat-form-field class="example-form-field">
+      <mat-label>Изчистете въведеното с кликане на 'х'</mat-label>
+      <input matInput type="text" [(ngModel)]="searchInput">
+      <button *ngIf="searchInput" matSuffix mat-icon-button aria-label="Clear" (click)="searchInput=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+   
     <br />
     <br />
-    <article>
+
       <h5>Резултати от търсене по заглавие...</h5>
-      <div>
+
       <ul class="cards" *ngFor="let post of themes | search : searchInput">
         <li class="card">
           <img
@@ -35,7 +36,7 @@
           <a routerLink="/themes/{{ post?._id }}">Вижте цялата рецепта...</a>
         </li>
       </ul>
-      </div>
-    </article>
+
+
   </section>
 </div>
