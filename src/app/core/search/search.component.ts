@@ -22,7 +22,7 @@ export class SearchComponent implements OnInit{
     this.apiService.getThemes().subscribe({
       next: (ts) => {
         this.themes = ts;
-    console.log(this.themes)
+    
       },
       error: (err) => {
           console.error(`Error: ${err}`);

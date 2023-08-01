@@ -6,9 +6,11 @@
 
 
       <img src="{{ theme?.img }}" alt="{{ theme?.title }}" style="width: 100%" />
-      <h6>{{ theme?.title }}</h6>
-      <p class="time">Време на приготвяне в минути: {{ theme?.time }}</p>
-      <p>Съставки: {{ theme?.ingredients }}</p>
+      <h6> Категория: {{ theme?.category }}</h6>
+      <p class="time"><span class="material-symbols-outlined">
+        schedule
+        </span> Време на приготвяне в минути: {{ theme?.time }}</p>
+      <p> Съставки: {{ theme?.ingredients }}</p>
       <p>Начин на приготвяне: {{ theme?.text }}</p>
       <div *ngIf="isOwner">
       <button (click)="deleteCurrentTheme()">Изтрийте</button>

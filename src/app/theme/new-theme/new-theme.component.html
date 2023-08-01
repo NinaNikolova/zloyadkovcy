@@ -66,7 +66,7 @@
        <!--INGREDIENTS -->
       
         <label for="ingredients">Необходими продукти: </label>
-        <textarea class="text" type="text" name="ingredients" id="ingredients" placeholder="Сол, захар..." #inputIngeredients="ngModel" ngModel required minlength="10"></textarea>
+        <textarea class="ingredients" type="text" name="ingredients" id="ingredients" placeholder="Сол, захар..." #inputIngeredients="ngModel" ngModel required minlength="10"></textarea>
   
       <ng-container *ngIf="inputIngeredients.touched">
         <p class="error" *ngIf="inputIngeredients.errors?.['required']">
@@ -80,7 +80,7 @@
             <!--TEXT  -->
     
         <label for="text">Начин на приготвяне: </label>
-        <textarea class="text" type="text" name="text" id="text" placeholder="Рецептата се приготвя" #inputText="ngModel" ngModel required minlength="20" ></textarea>
+        <textarea class="text" type="text" name="text" id="text" placeholder="Рецептата се приготвя..." #inputText="ngModel" ngModel required minlength="20" ></textarea>
   
       <ng-container *ngIf="inputText.touched">
         <p class="error" *ngIf="inputText.errors?.['required']">

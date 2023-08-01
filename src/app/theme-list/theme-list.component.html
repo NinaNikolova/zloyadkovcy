@@ -10,9 +10,11 @@
       />
       <h6>{{ post.title }}</h6>
       <span class="created"
-        >Публкувана в: {{ post.created_at.substring(0, 10) }}</span
+        >Публкувана: {{ post.created_at.substring(0, 10) }}</span
       >
-      <p class="time">Време на приготвяне в минути: {{ post.time }}</p>
+      <p class="time"> <span class="material-symbols-outlined">
+        schedule
+        </span>Време на приготвяне в минути: {{ post.time }}</p>
       <p>Съставки: {{ post.ingredients | slice }}</p>
       <p>Начин на приготвяне: {{ post.text | slice }}</p>
       <a routerLink="/themes/{{ post?._id }}">Вижте цялата рецепта...</a>
