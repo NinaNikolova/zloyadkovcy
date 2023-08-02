@@ -22,8 +22,8 @@
         
         
     </div>
-    <h3 *ngIf="themes?.length==0">Вие, {{username}}, нямате още публикувани рецепти</h3>
-    <div *ngIf="themes?.length>0">
+    <h3 *ngIf="themes==null">Вие, {{username}}, нямате още публикувани рецепти</h3>
+    <div *ngIf="themes!=null">
           <ul *ngFor="let theme of themes; let i = index">
             <li><a routerLink="/themes/{{theme?._id}}">Рецепта {{i+1}}</a></li>
           </ul>
