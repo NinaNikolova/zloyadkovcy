@@ -13,7 +13,7 @@
               <div class="muzzle"></div>
             </div>
           </div>
-        <h3>Твоите рецепти, {{username}}</h3>
+      
        
         <div class="flex">
             <p>Email: </p>
@@ -22,10 +22,16 @@
         
         
     </div>
-    <h3 *ngIf="themes==null">Вие, {{username}}, нямате още публикувани рецепти</h3>
-    <div *ngIf="themes!=null">
+    <br/>
+    <br/>
+        <h3>Твоите рецепти, {{username}}</h3>
+        <br/>
+        <br/>
+    <h3 *ngIf="themes.length==0">Вие, {{username}}, нямате още публикувани рецепти</h3>
+    <div *ngIf="themes.length>0">
+    
           <ul *ngFor="let theme of themes; let i = index">
-            <li><a routerLink="/themes/{{theme?._id}}">Рецепта {{i+1}}</a></li>
+            <li><a routerLink="/themes/{{theme?._id}}">Рецепта {{i+1}} - {{theme.title}}</a></li>
           </ul>
         </div>
 </div>

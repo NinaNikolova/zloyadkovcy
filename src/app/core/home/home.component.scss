@@ -7,7 +7,7 @@
     color: green;
     font-size: 23px;
     line-height: 2em;
-    font-style: oblique;
+    // font-style: oblique;
     margin: 0 auto;
     padding: 20px;
 
@@ -316,7 +316,7 @@
   
   
   #home h6 {
-    font-style: italic;
+    // font-style: italic;
     font-size: 30px;
     color: green;
     text-align: center;
@@ -325,12 +325,13 @@
   a {
     display: inline-block;
     background-color: lightgreen;
-    padding: 8px 16px;
+    padding: 8px 8px;
     margin: 0 8px;
     text-decoration: none;
     color: white;
-    border-radius: 10px;
-    height: 30px;
+    border-radius: 16px;
+    height: 40px;
+    font-size: 18px;
   
   }
   
