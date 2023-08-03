@@ -38,6 +38,16 @@ const routes: Routes = [
     }
   },
   {
+    path: 'users',
+    loadChildren:()=>import('./user/user.module').then(m=>m.UserModule),
+
+  },
+  {
+    path: 'themes',
+    loadChildren:()=>import('./theme/theme.module').then(m=>m.ThemeModule),
+
+  },
+  {
     path: '**',
     redirectTo: '/not-found'
   },

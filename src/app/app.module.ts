@@ -34,8 +34,6 @@ import { LoaderComponent } from './loader/loader.component';
     HttpClientModule,
     SharedModule,
     CoreModule,
-    UserModule,
-    ThemeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CloudinaryModule

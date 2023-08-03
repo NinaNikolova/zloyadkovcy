@@ -17,4 +17,5 @@ export class ErrorComponent implements OnInit {
       console.log(this.errorMsg)
     })
   }
+  
 }

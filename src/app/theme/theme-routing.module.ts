@@ -9,45 +9,42 @@ import { EditThemeComponent } from "./edit-theme/edit-theme.component";
 
 
 const routes: Routes = [
-  {
-    path: 'themes',
-    children: [
-      {
-        path: '',
-        pathMatch: 'full',
-        component: ThemeListComponent,
-        data: {
-          title: 'Всички рецепти'
-        },
-      },
 
-     
-      {
-        path: 'create-theme',
-        component: NewThemeComponent,
-        data: {
-          title: "Създай рецепта"
-        },
-        canActivate:[AuthActivate]
-      },
-      {
-        path: 'edit-theme/:themeId',
-        component: EditThemeComponent,
-        data: {
-          title: "Коригирай рецепта"
-        },
-        canActivate:[AuthActivate]
-      },
-      {
-        path: ':themeId',
-        component: CurrentThemeComponent,
-        data: {
-          title: "Цялата рецепта"
-        },
-      },
-      
-    ],
+  {
+    path: '',
+    pathMatch: 'full',
+    component: ThemeListComponent,
+    data: {
+      title: 'Всички рецепти'
+    },
   },
+
+
+  {
+    path: 'create-theme',
+    component: NewThemeComponent,
+    data: {
+      title: "Създай рецепта"
+    },
+    canActivate: [AuthActivate]
+  },
+  {
+    path: 'edit-theme/:themeId',
+    component: EditThemeComponent,
+    data: {
+      title: "Коригирай рецепта"
+    },
+    canActivate: [AuthActivate]
+  },
+  {
+    path: ':themeId',
+    component: CurrentThemeComponent,
+    data: {
+      title: "Цялата рецепта"
+    },
+  },
+
+
 
 ];
 
