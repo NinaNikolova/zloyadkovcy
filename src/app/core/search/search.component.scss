@@ -15,7 +15,7 @@
 
 hr{
   font-size: 1px;
-  border: 5px solid lightgreen;
+  border: 3px solid white;
 
 }
 
@@ -43,7 +43,9 @@ hr{
     display: inline-block;
   }
   h5{
-    color:#6c8b47
+    color:#6c8b47;
+    font-size: 20px;
+ 
   }
   
   .time {
@@ -118,9 +120,9 @@ hr{
       height: calc(100% + var(--border-width) * 2);
       background: linear-gradient(
         60deg,
-        hsl(224, 85%, 66%),
-        hsl(269, 85%, 66%),
-        hsl(314, 85%, 66%),
+      
+       
+    
         hsl(359, 85%, 66%),
         hsl(44, 85%, 66%),
         hsl(89, 85%, 66%),
