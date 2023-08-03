@@ -1,4 +1,3 @@
-/*login register forms  */
 
 form.new-theme {
     display: flex;
@@ -13,6 +12,7 @@ form.new-theme {
     text-align: center;
     margin: 2em auto;
     height: 77vh;
+    z-index: 1;
 }
 
 .new-theme fieldset {
@@ -22,7 +22,10 @@ form.new-theme {
     flex-direction: column;
     border-radius: 0.3em;
     padding: 0.8em;
-    background-color: #ffffff;
+    // background-color: lemonchiffon;
+    border:none;
+    background-color: antiquewhite;
+    z-index: 1;
 }
 
 .new-theme h2 {
@@ -52,7 +55,7 @@ form.new-theme {
 .new-theme button{
     color: white;
     border: none;
-    border-radius: 0.3em;
+    border-radius: 0.5em;
     padding: 0.6em 1.2em;
     margin-top: 1.5rem;
     width: 60%;
@@ -68,7 +71,13 @@ form.new-theme {
 .new-theme a:hover {
     cursor: pointer;
 }
-
+.ingredients{
+    width: 360px;
+    height: 160px;
+}
+textarea{
+    border-radius: 0.5em;
+}
 
 
 .new-theme .field {

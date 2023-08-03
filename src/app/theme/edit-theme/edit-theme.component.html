@@ -4,11 +4,11 @@
         <h2>Корегирайте рецепта:</h2>
     
   <!-- TITLE -->
-        <p class="input-field">
+      
           <label for="title">Заглавие: </label>
           <input class="input-error" type="title" name="title" id="title" #inputTitle="ngModel" ngModel="{{theme?.title}}" required minlength="2"
           />
-        </p>
+
         <ng-container *ngIf="inputTitle.touched">
           <p class="error" *ngIf="inputTitle.errors?.['required']">
             Въведете заглавие на пецептата!
@@ -19,7 +19,7 @@
           </p>
         </ng-container>
   <!-- CATEGORY -->
-        <p class="input-field">
+
           <label for="category">Категория: </label>
           <select id="category" type="text" name="category" id="category" #inputCategory="ngModel"  ngModel="{{theme?.category}}" required >
             <option *ngFor="let item of categories" [value]="item">
@@ -27,7 +27,7 @@
       </option>
          
           </select>
-        </p>
+
         <ng-container *ngIf="inputCategory.touched">
           <p class="error" *ngIf="inputCategory.errors?.['required']">
             Въведете категория!
@@ -35,10 +35,10 @@
          
         </ng-container>
   <!-- TIME -->
-        <p class="input-field">
+      
           <label for="time">Време за приготвяне: </label>
           <input type="number" name="time" id="time" #inputTime="ngModel" ngModel="{{theme?.time}}" required minlength="1" />
-        </p>
+    
         <ng-container *ngIf="inputTime.touched">
           <p class="error" *ngIf="inputTime.errors?.['required']">
             Въведете време за приготвяне в минути!
@@ -50,10 +50,10 @@
         </ng-container>
   
         <!--IMG  -->
-        <p class="input-field">
+  
           <label for="img">Снимка: </label>
           <input type="text" name="img" id="img" #inputImg="ngModel" ngModel="{{theme?.img}}" required minlength="3" />
-        </p>
+       
         <ng-container *ngIf="inputImg.touched">
           <p class="error" *ngIf="inputImg.errors?.['required']">
             Въведете снимка!
@@ -64,10 +64,10 @@
           </p>
         </ng-container>
          <!--INGREDIENTS -->
-         <p class="input-field">
+
           <label for="ingredients">Необходими продукти: </label>
           <textarea class="text" type="text" name="ingredients" id="ingredients" #inputIngeredients="ngModel" ngModel="{{theme?.ingredients}}" required minlength="10"></textarea>
-        </p>
+      
         <ng-container *ngIf="inputIngeredients.touched">
           <p class="error" *ngIf="inputIngeredients.errors?.['required']">
             Въведете необходими продукти!
@@ -78,10 +78,10 @@
         </ng-container>
   
               <!--TEXT  -->
-        <p class="input-field">
+ 
           <label for="text">Начин на приготвяне: </label>
           <textarea class="text" type="text" name="text" id="text" #inputText="ngModel" ngModel="{{theme?.text}}" required minlength="20" ></textarea>
-        </p>
+   
         <ng-container *ngIf="inputText.touched">
           <p class="error" *ngIf="inputText.errors?.['required']">
             Опишете как се приготвя рецептата!
