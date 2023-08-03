@@ -17,6 +17,7 @@ import { appInterceptorProvider } from './app-interceptor';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {CloudinaryModule} from '@cloudinary/ng';
+import { LoaderComponent } from './loader/loader.component';
 // add cloudinary in this module for future development !!!
 
 
@@ -25,6 +26,7 @@ import {CloudinaryModule} from '@cloudinary/ng';
     AppComponent,
     ThemeListComponent,
     AuthenticateComponent,
+    LoaderComponent,
 
   ],
   imports: [
