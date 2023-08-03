@@ -41,7 +41,7 @@ import {MatSelectModule} from '@angular/material/select';
 
 
     ],
-    exports: [HeaderComponent, FooterComponent, PageNotFoundComponent, HomeComponent],
+    exports: [HeaderComponent, FooterComponent, PageNotFoundComponent, HomeComponent, ErrorComponent],
     imports: [
         CommonModule, SharedModule,
         BrowserModule,

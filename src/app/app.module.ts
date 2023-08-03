@@ -7,8 +7,7 @@ import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './core/home/home.component';
 import { SharedModule } from './shared/shared.module';
-import { API_ERROR } from './shared/constants';
-import { BehaviorSubject } from 'rxjs';
+
 import { ThemeListComponent } from './theme-list/theme-list.component';
 
 import { UserModule } from './user/user.module';

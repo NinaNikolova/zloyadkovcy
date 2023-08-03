@@ -9,6 +9,7 @@ import { SearchComponent } from './core/search/search.component';
 const routes: Routes = [
   {
     path: '',
+    pathMatch: 'full',
     component: HomeComponent,
     data:{
       title: 'Начало'
