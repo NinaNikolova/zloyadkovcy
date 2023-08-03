@@ -27,10 +27,11 @@ export class ProfileComponent implements OnInit{
     return this.userService.isLogged;
   }
   ngOnInit(): void {
+    
       this.apiService.getThemes().subscribe({
       next: (ts) => {
     
-    
+    this.themes=ts.filter(t=>t.userId.email==this.email)
         console.log(this.themes)
       },
       error: (err) => {

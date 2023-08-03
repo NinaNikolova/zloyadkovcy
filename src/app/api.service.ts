@@ -32,6 +32,10 @@ export class ApiService {
     const { apiUrl } = environment;
     return this.http.get<Theme[]>(`${apiUrl}/themes`);
   }
+  getThemesByUser(userId: string | undefined){
+    const { apiUrl } = environment;
+    return this.http.get<Theme[]>(`${apiUrl}/themes?userId=${userId}`);
+  }
   
   
 
