@@ -28,6 +28,7 @@ const routes: Routes = [
         data: {
           title: "Създай рецепта"
         },
+        canActivate:[AuthActivate]
       },
       {
         path: 'edit-theme/:themeId',
@@ -35,6 +36,7 @@ const routes: Routes = [
         data: {
           title: "Коригирай рецепта"
         },
+        canActivate:[AuthActivate]
       },
       {
         path: ':themeId',
