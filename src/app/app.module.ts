@@ -16,8 +16,8 @@ import { ThemeModule } from './theme/theme.module';
 import { appInterceptorProvider } from './app-interceptor';
 import { AuthenticateComponent } from './authenticate/authenticate.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import {CloudinaryModule} from '@cloudinary/ng';
+// add cloudinary in this module for future development !!!
 
 
 @NgModule({
@@ -37,6 +37,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ThemeModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    CloudinaryModule
   
   ],
   providers: [appInterceptorProvider],
@@ -44,3 +45,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   exports: []
 })
 export class AppModule { }
+
+
+
+
+
+
