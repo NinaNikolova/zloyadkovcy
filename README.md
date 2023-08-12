@@ -20,3 +20,10 @@
 ### - Download the rest api from here: https://github.com/NinaNikolova/restapi-zloyadkovci
 ### - Install the dependencies `npm i`
 ### - To start project - Run `npm start` - Navigate to `http://localhost:4200/`. 
+
+## Application Structure
+The application has:
+
+• public part (accessible without authentication): Home page, Themes /recipes/ page, Page of every recipe,  Search page
+
+• private part (available for registered users): Create-theme page, Edit-theme page
