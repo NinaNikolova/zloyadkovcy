@@ -24,6 +24,6 @@
 ## Application Structure
 The application has:
 
-• public part (accessible without authentication): Home page, Themes /recipes/ page, Page of every recipe,  Search page
+- public part (accessible without authentication): Home page, Themes /recipes/ page, Page of every recipe,  Search page
 
-• private part (available for registered users): Create-theme page, Edit-theme page
+- private part (available for registered users): Create-theme page, Edit-theme page, Profile page /with all own recipes/
