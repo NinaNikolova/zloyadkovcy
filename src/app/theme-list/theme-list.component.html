@@ -10,7 +10,7 @@
       />
       <h6>{{ post.title }}</h6>
       <span class="created"
-        >Публкувана: {{ post.created_at.substring(0, 10) }}</span
+        >Публкувана: {{ post.created_at | date :"dd.MM.y" }}</span
       >
       <p class="time"> <span class="material-symbols-outlined">
         schedule
